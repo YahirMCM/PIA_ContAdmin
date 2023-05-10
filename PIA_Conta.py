@@ -16,6 +16,7 @@ inv_ProdFin = int(input("inventario de producto terminado: $"))
 tActCircu = (efectivo + clientes + deudores + funcionarios + inv_mats + inv_ProdFin)
 print("Total de Activo Circulante: ", tActCircu)
 
+# Error de calculo de la 21 a la 29
 print('-'*20)
 terry = int(input("\tTerreno: "))
 planta = int(input("\tPlanta y Equipo: "))
@@ -24,8 +25,8 @@ tActNo = (terry + planta - despAcum)
 print("Total de Activo No Circulante: ", tActNo)
 
 print('-'*20)
-act_tot=(totl_act + total_no)
-print("ACTIVO TOTAL: ", tActCircu + tActNo)
+act_tot=(tActCircu + tActNo)
+print("ACTIVO TOTAL: ", act_tot)
 print('-'*20)
 # Pedimos los Pasivos
 
@@ -64,21 +65,21 @@ print("Suma del PASIVO y CAPITAL: ",sum_pasCapital)
 print('-'*20)
 print("\t\tRequerimientos de Materiales")
 print("Material A")
-matPrima_A1 = int(input("Producto CF: "))
-matPrima_A2 = int(input("Producto CD: "))
-matPrima_A3 = int(input("Producto CP: "))
+matPrima_A1 = float(input("Producto CF: "))
+matPrima_A2 = float(input("Producto CD: "))
+matPrima_A3 = float(input("Producto CP: "))
 print('-'*20)
 
 print("Material B")
-matPrima_B1 = int(input("Producto CF: "))
-matPrima_B2 = int(input("Producto CD: "))
-matPrima_B3 = int(input("Producto CP: "))
+matPrima_B1 = float(input("Producto CF: "))
+matPrima_B2 = float(input("Producto CD: "))
+matPrima_B3 = float(input("Producto CP: "))
 print('-'*20)
 
 print("Material C")
-matPrima_C1 = int(input("Producto CF: "))
-matPrima_C2 = int(input("Producto CD: "))
-matPrima_C3 = int(input("Producto CP: "))
+matPrima_C1 = float(input("Producto CF: "))
+matPrima_C2 = float(input("Producto CD: "))
+matPrima_C3 = float(input("Producto CP: "))
 print('-'*20)
 
 print('Horas de Mano de Obra')
@@ -234,12 +235,12 @@ print(f'total de venta{Total_de_ventas_por_semestres}')
 #****************
 print('\t\t- - - 2.Determinacion del saldo de clientes y flujo de entradas- - -')
 print('-'*20)
-Saldo_de_clientes_31_Dic_2022 = print(f'{clientes}')
-ventas_2022 = print(f'{Total_de_ventas_por_semestres}')
-Total_de_clientes2022 = (Saldo_de_clientes_31_Dic_2022+ventas_2022)
+Saldo_de_clientes_31_Dic_2022 = clientes
+ventas_2022 = Total_de_ventas_por_semestres 
+Total_de_clientes2022 = (Saldo_de_clientes_31_Dic_2022+ventas_2022) # ERROR EN ESTA LÍNEA -> CREO QUE LO CORREGÍ
 print(f"Total de clientes 2022:{Total_de_clientes2022}")
 print("Entradas de efectivo:")
-Por_cobranza2022 = (f'{Saldo_de_clientes_31_Dic_2022}')
+Por_cobranza2022 = Saldo_de_clientes_31_Dic_2022
 Por_cobranza2023 = (ventas_2022)*(0.8)
 Cobranza_final = (Por_cobranza2022+Por_cobranza2023)
 print(f"cobranza final:{Cobranza_final}")
