@@ -846,3 +846,34 @@ print('-'*20)
 #**************************************************************
 # 6. Determinación del saldo de Proveedores y Flujo de Salidas
 #**************************************************************
+
+print('\t\t- - - 6. Determinación del saldo de Proveedores y Flujo de Salidas - - -')
+print('-'*20)
+
+print('\tTotal')
+print(f'Saldo de Proveedores 31-Dic-2022 {proveedores}')
+print(f'Compras 2023 {compras_totales_2022}')
+total_de_proveedores_2023 = proveedores + compras_totales_2022
+print(f'Total de Proveedores 2023 {total_de_proveedores_2023}')
+print('-'*20)
+
+print('\n\tImporte')
+print('\tSalidas de Efectivo: ')
+proveedores_del_2022 = proveedores
+print(f'Por Proveedores del 2022 $ {proveedores_del_2022}')
+proveedores_del_2023 = compras_totales_2022 * 0.5
+print(f'Por Proveedores del 2023 $ {proveedores_del_2023}')
+print('-'*20)
+
+print('\n\tTotal')
+total_de_salidas_2023 = proveedores_del_2022 + proveedores_del_2023
+print(f'Total de Salidas 2023: {total_de_salidas_2023}')
+print('-'*20)
+
+saldo_de_proveedores_del_2023 = total_de_proveedores_2023 + total_de_salidas_2023
+print(f'Saldo de Proveedores del 2023 $ {saldo_de_proveedores_del_2023}')
+print('-'*20)
+
+#**************************************************************
+# 7. Presupuesto de Mano de Obra Directa
+#**************************************************************
