@@ -354,3 +354,310 @@ total_inventarioInicial2023CP=(inventario_inicialCP+inverario_inicial_2dosemestr
 print(f'total de inventario inicial CP:{total_inventarioInicial2023CP}')
 total_unidades_aProducir2023CP=(Unidades_a_producir_1ersemestreCP+Unidades_a_producir_2dosemestreCP)
 print(f'total de unidades a producir CP:{total_unidades_aProducir2023CP}')
+
+
+#**********************************************
+# 4. Presupuesto de Requerimiento de Materiales
+#**********************************************
+print('-'*20)
+print('\t\t- - - 4. Presupuesto de Requerimiento de Materiales - - -')
+# PRODUCTO CF
+print('\tPRODUCTO CF')
+print('-'*20)
+print(f'Unidades a Producir -  Primer Semestre: {Unidades_a_producir_1ersemestre}')
+print(f'Unidades a Producir -  Segundo Semestre: {Unidades_a_producir_2dosemestre}')
+print(f'Unidades a Producir -  Total 2022: {total_unidades_aProducir2023}')
+print('-'*20)
+
+#
+# Primer Semestre
+#
+
+print('\t1er Semestre')
+# Material A
+print('-'*20)
+print('\tMaterial A')
+print(f'Requerimiento de Material: {matPrima_A1}')
+total_material_A_requerido_1sem = Unidades_a_producir_1ersemestre * matPrima_A1
+print(f'Total de Material Requerido: {total_material_A_requerido_1sem}')
+
+# Material B
+print('-'*20)
+print('\tMaterial B')
+print(f'Requerimiento de Material: {matPrima_B1}')
+total_material_B_requerido_1sem = Unidades_a_producir_1ersemestre * matPrima_B1
+print(f'Total de Material Requerido: {total_material_B_requerido_1sem}')
+
+# Material C
+print('-'*20)
+print('\tMaterial C')
+print(f'Requerimiento de Material: {matPrima_C1}')
+total_material_C_requerido_1sem = Unidades_a_producir_1ersemestre * matPrima_C1
+print(f'Total de Material Requerido: {total_material_C_requerido_1sem}')
+print('-'*20)
+
+#
+# Segundo Semestre
+#
+print('\t2do Semestre')
+# Material A
+print('-'*20)
+print('\tMaterial A')
+print(f'Requerimiento de Material: {matPrima_A1}')
+total_material_A_requerido_2sem = Unidades_a_producir_2dosemestre * matPrima_A1
+print(f'Total de Material Requerido: {total_material_A_requerido_2sem}')
+
+# Material B
+print('-'*20)
+print('\tMaterial B')
+print(f'Requerimiento de Material: {matPrima_B1}')
+total_material_B_requerido_2sem = Unidades_a_producir_2dosemestre * matPrima_B1
+print(f'Total de Material Requerido: {total_material_B_requerido_2sem}')
+
+# Material C
+print('-'*20)
+print('\tMaterial C')
+print(f'Requerimiento de Material: {matPrima_C1}')
+total_material_C_requerido_2sem = Unidades_a_producir_2dosemestre * matPrima_C1
+print(f'Total de Material Requerido: {total_material_C_requerido_2sem}')
+print('-'*20)
+
+#
+# Total 2022
+#
+print('\tTotal 2022')
+# Material A
+print('-'*20)
+print('\tMaterial A')
+print(f'Requerimiento de Material: {matPrima_A1}')
+total_material_A_requerido_total_2022 = total_unidades_aProducir2023 * matPrima_A1
+print(f'Total de Material Requerido: {total_material_A_requerido_total_2022}')
+
+# Material B
+print('-'*20)
+print('\tMaterial B')
+print(f'Requerimiento de Material: {matPrima_B1}')
+total_material_B_requerido_total_2022 = total_unidades_aProducir2023 * matPrima_B1
+print(f'Total de Material Requerido: {total_material_B_requerido_total_2022}')
+
+# Material C
+print('-'*20)
+print('\tMaterial C')
+print(f'Requerimiento de Material: {matPrima_C1}')
+total_material_C_requerido_total_2022 = total_unidades_aProducir2023 * matPrima_C1
+print(f'Total de Material Requerido: {total_material_C_requerido_total_2022}')
+print('-'*20)
+
+####################################################################################
+# PRODUCTO CD
+print('\tPRODUCTO CD')
+print('-'*20)
+print(f'Unidades a Producir -  Primer Semestre: {Unidades_a_producir_1ersemestreCD}')
+print(f'Unidades a Producir -  Segundo Semestre: {Unidades_a_producir_2dosemestreCD}')
+print(f'Unidades a Producir -  Total 2022: {total_unidades_aProducir2023CD}')
+print('-'*20)
+
+#
+# Primer Semestre
+#
+
+print('\t1er Semestre')
+# Material A
+print('-'*20)
+print('\tMaterial A')
+print(f'Requerimiento de Material: {matPrima_A2}')
+total_material_A_requerido_1sem_CD = Unidades_a_producir_1ersemestreCD * matPrima_A2
+print(f'Total de Material Requerido: {total_material_A_requerido_1sem_CD}')
+
+# Material B
+print('-'*20)
+print('\tMaterial B')
+print(f'Requerimiento de Material: {matPrima_B2}')
+total_material_B_requerido_1sem_CD = Unidades_a_producir_1ersemestreCD * matPrima_B2
+print(f'Total de Material Requerido: {total_material_B_requerido_1sem_CD}')
+
+# Material C
+print('-'*20)
+print('\tMaterial C')
+print(f'Requerimiento de Material: {matPrima_C2}')
+total_material_C_requerido_1sem_CD = Unidades_a_producir_1ersemestreCD * matPrima_C2
+print(f'Total de Material Requerido: {total_material_C_requerido_1sem_CD}')
+print('-'*20)
+
+#
+# Segundo Semestre
+#
+print('\t2do Semestre')
+# Material A
+print('-'*20)
+print('\tMaterial A')
+print(f'Requerimiento de Material: {matPrima_A2}')
+total_material_A_requerido_2sem_CD = Unidades_a_producir_2dosemestreCD * matPrima_A2
+print(f'Total de Material Requerido: {total_material_A_requerido_2sem_CD}')
+
+# Material B
+print('-'*20)
+print('\tMaterial B')
+print(f'Requerimiento de Material: {matPrima_B2}')
+total_material_B_requerido_2sem_CD = Unidades_a_producir_2dosemestreCD * matPrima_B2
+print(f'Total de Material Requerido: {total_material_B_requerido_2sem_CD}')
+
+# Material C
+print('-'*20)
+print('\tMaterial C')
+print(f'Requerimiento de Material: {matPrima_C2}')
+total_material_C_requerido_2sem_CD = Unidades_a_producir_2dosemestreCD * matPrima_C2
+print(f'Total de Material Requerido: {total_material_C_requerido_2sem_CD}')
+print('-'*20)
+
+#
+# Total 2022
+#
+print('\tTotal 2022')
+# Material A
+print('-'*20)
+print('\tMaterial A')
+print(f'Requerimiento de Material: {matPrima_A2}')
+total_material_A_requerido_total_2022_CD = total_unidades_aProducir2023CD * matPrima_A2
+print(f'Total de Material Requerido: {total_material_A_requerido_total_2022_CD}')
+
+# Material B
+print('-'*20)
+print('\tMaterial B')
+print(f'Requerimiento de Material: {matPrima_B2}')
+total_material_B_requerido_total_2022_CD = total_unidades_aProducir2023CD * matPrima_B2
+print(f'Total de Material Requerido: {total_material_B_requerido_total_2022_CD}')
+
+# Material C
+print('-'*20)
+print('\tMaterial C')
+print(f'Requerimiento de Material: {matPrima_C2}')
+total_material_C_requerido_total_2022_CD = total_unidades_aProducir2023CD * matPrima_C2
+print(f'Total de Material Requerido: {total_material_C_requerido_total_2022_CD}')
+print('-'*20)
+
+######################################################################################
+# PRODUCTO CP
+print('\tPRODUCTO C')
+print('-'*20)
+print(f'Unidades a Producir -  Primer Semestre: {Unidades_a_producir_1ersemestreCP}')
+print(f'Unidades a Producir -  Segundo Semestre: {Unidades_a_producir_2dosemestreCP}')
+print(f'Unidades a Producir -  Total 2022: {total_unidades_aProducir2023CP}')
+print('-'*20)
+
+#
+# Primer Semestre
+#
+
+print('\t1er Semestre')
+# Material A
+print('-'*20)
+print('\tMaterial A')
+print(f'Requerimiento de Material: {matPrima_A3}')
+total_material_A_requerido_1sem_CP = Unidades_a_producir_1ersemestreCP * matPrima_A3
+print(f'Total de Material Requerido: {total_material_A_requerido_1sem_CP}')
+
+# Material B
+print('-'*20)
+print('\tMaterial B')
+print(f'Requerimiento de Material: {matPrima_B3}')
+total_material_B_requerido_1sem_CP = Unidades_a_producir_1ersemestreCP * matPrima_B3
+print(f'Total de Material Requerido: {total_material_B_requerido_1sem_CP}')
+
+# Material C
+print('-'*20)
+print('\tMaterial C')
+print(f'Requerimiento de Material: {matPrima_C3}')
+total_material_C_requerido_1sem_CP = Unidades_a_producir_1ersemestreCP * matPrima_C3
+print(f'Total de Material Requerido: {total_material_C_requerido_1sem_CP}')
+print('-'*20)
+
+#
+# Segundo Semestre
+#
+print('\t2do Semestre')
+# Material A
+print('-'*20)
+print('\tMaterial A')
+print(f'Requerimiento de Material: {matPrima_A3}')
+total_material_A_requerido_2sem_CP = Unidades_a_producir_2dosemestreCP * matPrima_A3
+print(f'Total de Material Requerido: {total_material_A_requerido_2sem_CP}')
+
+# Material B
+print('-'*20)
+print('\tMaterial B')
+print(f'Requerimiento de Material: {matPrima_B3}')
+total_material_B_requerido_2sem_CP = Unidades_a_producir_2dosemestreCP * matPrima_B3
+print(f'Total de Material Requerido: {total_material_B_requerido_2sem_CP}')
+
+# Material C
+print('-'*20)
+print('\tMaterial C')
+print(f'Requerimiento de Material: {matPrima_C3}')
+total_material_C_requerido_2sem_CP = Unidades_a_producir_2dosemestreCP * matPrima_C3
+print(f'Total de Material Requerido: {total_material_C_requerido_2sem_CP}')
+print('-'*20)
+
+#
+# Total 2022
+#
+print('\tTotal 2022')
+# Material A
+print('-'*20)
+print('\tMaterial A')
+print(f'Requerimiento de Material: {matPrima_A3}')
+total_material_A_requerido_total_2022_CP = total_unidades_aProducir2023CP * matPrima_A3
+print(f'Total de Material Requerido: {total_material_A_requerido_total_2022_CP}')
+
+# Material B
+print('-'*20)
+print('\tMaterial B')
+print(f'Requerimiento de Material: {matPrima_B3}')
+total_material_B_requerido_total_2022_CP = total_unidades_aProducir2023CP * matPrima_B3
+print(f'Total de Material Requerido: {total_material_B_requerido_total_2022_CP}')
+
+# Material C
+print('-'*20)
+print('\tMaterial C')
+print(f'Requerimiento de Material: {matPrima_C3}')
+total_material_C_requerido_total_2022_CP = total_unidades_aProducir2023CP * matPrima_C3
+print(f'Total de Material Requerido: {total_material_C_requerido_total_2022_CP}')
+print('-'*20)
+
+######################################################################################################
+# Total de Requerimientos
+print('\tTOTAL DE REQUERIMIENTOS')
+#
+# 1er Semestre
+#
+print('-'*20)
+print('\t1er Semestre')
+total_requerimientos_mat_A_1sem = total_material_A_requerido_1sem + total_material_A_requerido_1sem_CD + total_material_A_requerido_1sem_CP
+print(f'Material A: ${total_requerimientos_mat_A_1sem}')
+total_requerimientos_mat_B_1sem = total_material_B_requerido_1sem + total_material_B_requerido_1sem_CD + total_material_B_requerido_1sem_CP
+print(f'Material B: ${total_requerimientos_mat_B_1sem}')
+total_requerimientos_mat_C_1sem = total_material_C_requerido_1sem + total_material_C_requerido_1sem_CD + total_material_C_requerido_1sem_CP
+print(f'Material C: ${total_requerimientos_mat_C_1sem}')
+#
+# 2do Semestre
+#
+print('-'*20)
+print('\t2do Semestre')
+total_requerimientos_mat_A_2sem = total_material_A_requerido_2sem + total_material_A_requerido_2sem_CD + total_material_A_requerido_2sem_CP
+print(f'Material A: ${total_requerimientos_mat_A_2sem}')
+total_requerimientos_mat_B_2sem = total_material_B_requerido_2sem + total_material_B_requerido_2sem_CD + total_material_B_requerido_2sem_CP
+print(f'Material B: ${total_requerimientos_mat_B_2sem}')
+total_requerimientos_mat_C_2sem = total_material_C_requerido_2sem + total_material_C_requerido_2sem_CD + total_material_C_requerido_2sem_CP
+print(f'Material C: ${total_requerimientos_mat_C_2sem}')
+#
+# Total 2022
+#
+print('-'*20)
+print('\tTotal 2022')
+total_requerimientos_mat_A_Total_2022 = total_material_A_requerido_total_2022 + total_material_A_requerido_total_2022_CD + total_material_A_requerido_total_2022_CP
+print(f'Material A: ${total_requerimientos_mat_A_Total_2022}')
+total_requerimientos_mat_B_Total_2022 = total_material_B_requerido_total_2022 + total_material_B_requerido_total_2022_CD + total_material_B_requerido_total_2022_CP
+print(f'Material B: ${total_requerimientos_mat_B_Total_2022}')
+total_requerimientos_mat_C_Total_2022 = total_material_C_requerido_total_2022 + total_material_C_requerido_total_2022_CD + total_material_C_requerido_total_2022_CP
+print(f'Material C: ${total_requerimientos_mat_C_Total_2022}')
+print('-'*20)
