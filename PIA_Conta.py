@@ -260,3 +260,4 @@ Cobranza_final = (Por_cobranza2022+Por_cobranza2023)
 print(f"cobranza final:"Cobranza_final)
 Saldo_de_clientesfinal=(Total_de_clientes2022+Cobranza_final)
 #hola
+#Si te leo
