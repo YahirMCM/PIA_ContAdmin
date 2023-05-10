@@ -355,7 +355,6 @@ print(f'total de inventario inicial CP:{total_inventarioInicial2023CP}')
 total_unidades_aProducir2023CP=(Unidades_a_producir_1ersemestreCP+Unidades_a_producir_2dosemestreCP)
 print(f'total de unidades a producir CP:{total_unidades_aProducir2023CP}')
 
-
 #**********************************************
 # 4. Presupuesto de Requerimiento de Materiales
 #**********************************************
@@ -661,3 +660,189 @@ print(f'Material B: ${total_requerimientos_mat_B_Total_2022}')
 total_requerimientos_mat_C_Total_2022 = total_material_C_requerido_total_2022 + total_material_C_requerido_total_2022_CD + total_material_C_requerido_total_2022_CP
 print(f'Material C: ${total_requerimientos_mat_C_Total_2022}')
 print('-'*20)
+
+#**********************************************
+# 5. Presupuesto de Compra de Materiales
+#**********************************************
+print('\t\t5. Presupuesto de Compra de Materiales')
+print('-'*20)
+
+#
+# 1er Semestre
+#
+print('\t1er Semestre')
+# Material A
+print('Material A')
+print('-'*20)
+
+print(f'Requerimiento de Materiales: $ {total_requerimientos_mat_A_1sem}')
+print(f'( + ) Inventario Final: $ {matA_1s}')
+total_de_materiales_A_1sem = total_requerimientos_mat_A_1sem + matA_1s
+print(f'Total de Materiales: $ {total_de_materiales_A_1sem}')
+inventario_inicial_materiales_A_1sem = matA_1s
+print(f'( - ) Inventario Inicial: $ {inventario_inicial_materiales_A_1sem}')
+material_a_comprar_A_1sem = total_de_materiales_A_1sem - inventario_inicial_materiales_A_1sem
+print(f'Material a Comprar: $ {material_a_comprar_A_1sem}')
+print(f'Precio de Compra: $ {matA_Costo_1s}')
+total_de_material_A_costo_1sem = material_a_comprar_A_1sem * matA_Costo_1s
+print(f'Total de Material A en $: {total_de_material_A_costo_1sem}')
+print('-'*20)
+
+# Material B
+print('Material B')
+print('-'*20)
+
+print(f'Requerimiento de Materiales: $ {total_requerimientos_mat_B_1sem}')
+print(f'( + ) Inventario Final: $ {matB_1s}')
+total_de_materiales_B_1sem = total_requerimientos_mat_B_1sem + matB_1s
+print(f'Total de Materiales: $ {total_de_materiales_B_1sem}')
+inventario_inicial_materiales_B_1sem = matB_1s
+print(f'( - ) Inventario Inicial: $ {inventario_inicial_materiales_B_1sem}')
+material_a_comprar_B_1sem = total_de_materiales_B_1sem - inventario_inicial_materiales_B_1sem
+print(f'Material a Comprar: $ {material_a_comprar_B_1sem}')
+print(f'Precio de Compra: $ {matB_Costo_1s}')
+total_de_material_B_costo_1sem = material_a_comprar_B_1sem * matB_Costo_1s
+print(f'Total de Material B en $: {total_de_material_B_costo_1sem}')
+print('-'*20)
+
+# Material C
+print('Material C')
+print('-'*20)
+
+print(f'Requerimiento de Materiales: $ {total_requerimientos_mat_C_1sem}')
+print(f'( + ) Inventario Final: $ {matC_1s}')
+total_de_materiales_C_1sem = total_requerimientos_mat_C_1sem + matC_1s
+print(f'Total de Materiales: $ {total_de_materiales_C_1sem}')
+inventario_inicial_materiales_C_1sem = matC_1s
+print(f'( - ) Inventario Inicial: $ {inventario_inicial_materiales_C_1sem}')
+material_a_comprar_C_1sem = total_de_materiales_C_1sem - inventario_inicial_materiales_C_1sem
+print(f'Material a Comprar: $ {material_a_comprar_C_1sem}')
+print(f'Precio de Compra: $ {matC_Costo_1s}')
+total_de_material_C_costo_1sem = material_a_comprar_C_1sem * matC_Costo_1s
+print(f'Total de Material B en $: {total_de_material_C_costo_1sem}')
+print('-'*20)
+
+compras_totales_1sem = total_de_material_A_costo_1sem + total_de_material_B_costo_1sem + total_de_material_B_costo_1sem
+print(f'Compras totales: $ {compras_totales_1sem}')
+print('-'*20)
+
+#
+# 2do Semestre
+#
+print('\t2do Semestre')
+# Material A
+print('Material A')
+print('-'*20)
+
+print(f'Requerimiento de Materiales: $ {total_requerimientos_mat_A_2sem}')
+print(f'( + ) Inventario Final: $ {matA_2s}')
+total_de_materiales_A_2sem = total_requerimientos_mat_A_2sem + matA_2s
+print(f'Total de Materiales: $ {total_de_materiales_A_2sem}')
+inventario_inicial_materiales_A_2sem = matA_2s
+print(f'( - ) Inventario Inicial: $ {inventario_inicial_materiales_A_2sem}')
+material_a_comprar_A_2sem = total_de_materiales_A_2sem - inventario_inicial_materiales_A_2sem
+print(f'Material a Comprar: $ {material_a_comprar_A_2sem}')
+print(f'Precio de Compra: $ {matA_Costo_2s}')
+total_de_material_A_costo_2sem = material_a_comprar_A_2sem * matA_Costo_2s
+print(f'Total de Material A en $: {total_de_material_A_costo_2sem}')
+print('-'*20)
+
+# Material B
+print('Material B')
+print('-'*20)
+
+print(f'Requerimiento de Materiales: $ {total_requerimientos_mat_B_2sem}')
+print(f'( + ) Inventario Final: $ {matB_2s}')
+total_de_materiales_B_2sem = total_requerimientos_mat_B_2sem + matB_2s
+print(f'Total de Materiales: $ {total_de_materiales_B_2sem}')
+inventario_inicial_materiales_B_2sem = matB_2s
+print(f'( - ) Inventario Inicial: $ {inventario_inicial_materiales_B_2sem}')
+material_a_comprar_B_2sem = total_de_materiales_B_2sem - inventario_inicial_materiales_B_2sem
+print(f'Material a Comprar: $ {material_a_comprar_B_2sem}')
+print(f'Precio de Compra: $ {matB_Costo_2s}')
+total_de_material_B_costo_2sem = material_a_comprar_B_2sem * matB_Costo_2s
+print(f'Total de Material B en $: {total_de_material_B_costo_2sem}')
+print('-'*20)
+
+# Material C
+print('Material C')
+print('-'*20)
+
+print(f'Requerimiento de Materiales: $ {total_requerimientos_mat_C_2sem}')
+print(f'( + ) Inventario Final: $ {matC_2s}')
+total_de_materiales_C_2sem = total_requerimientos_mat_C_2sem + matC_2s
+print(f'Total de Materiales: $ {total_de_materiales_C_2sem}')
+inventario_inicial_materiales_C_2sem = matC_2s
+print(f'( - ) Inventario Inicial: $ {inventario_inicial_materiales_C_2sem}')
+material_a_comprar_C_2sem = total_de_materiales_C_2sem - inventario_inicial_materiales_C_2sem
+print(f'Material a Comprar: $ {material_a_comprar_C_2sem}')
+print(f'Precio de Compra: $ {matC_Costo_2s}')
+total_de_material_C_costo_2sem = material_a_comprar_C_2sem * matC_Costo_2s
+print(f'Total de Material B en $: {total_de_material_C_costo_2sem}')
+print('-'*20)
+
+compras_totales_2sem = total_de_material_A_costo_2sem + total_de_material_B_costo_2sem + total_de_material_B_costo_2sem
+print(f'Compras totales: $ {compras_totales_2sem}')
+print('-'*20)
+#
+# Total 2022
+#
+print('\tTotal 2022')
+# Material A
+print('Material A')
+print('-'*20)
+
+print(f'Requerimiento de Materiales: $ {total_requerimientos_mat_A_Total_2022}')
+print(f'( + ) Inventario Final: $ {matA_3s}')
+total_de_materiales_A_total_2022 = total_requerimientos_mat_A_Total_2022 + matA_3s
+print(f'Total de Materiales: $ {total_de_materiales_A_total_2022}')
+inventario_inicial_materiales_A_total_2022 = matA_3s
+print(f'( - ) Inventario Inicial: $ {inventario_inicial_materiales_A_total_2022}')
+material_a_comprar_A_total_2022 = total_de_materiales_A_total_2022 - inventario_inicial_materiales_A_total_2022
+print(f'Material a Comprar: $ {material_a_comprar_A_total_2022}')
+print(f'Precio de Compra: $ {matA_Costo_3s}')
+total_de_material_A_costo_total_2022 = material_a_comprar_A_total_2022 * matA_Costo_3s
+print(f'Total de Material A en $: {total_de_material_A_costo_total_2022}')
+print('-'*20)
+
+# Material B
+print('Material B')
+print('-'*20)
+
+print(f'Requerimiento de Materiales: $ {total_requerimientos_mat_B_Total_2022}')
+print(f'( + ) Inventario Final: $ {matB_3s}')
+total_de_materiales_B_total_2022 = total_requerimientos_mat_B_Total_2022 + matB_3s
+print(f'Total de Materiales: $ {total_de_materiales_B_total_2022}')
+inventario_inicial_materiales_B_total_2022 = matB_3s
+print(f'( - ) Inventario Inicial: $ {inventario_inicial_materiales_B_total_2022}')
+material_a_comprar_B_total_2022 = total_de_materiales_B_total_2022 - inventario_inicial_materiales_B_total_2022
+print(f'Material a Comprar: $ {material_a_comprar_B_total_2022}')
+print(f'Precio de Compra: $ {matB_Costo_3s}')
+total_de_material_B_costo_total_2022 = material_a_comprar_B_total_2022 * matB_Costo_3s
+print(f'Total de Material B en $: {total_de_material_B_costo_total_2022}')
+print('-'*20)
+
+# Material C
+print('Material C')
+print('-'*20)
+
+print(f'Requerimiento de Materiales: $ {total_requerimientos_mat_C_Total_2022}')
+print(f'( + ) Inventario Final: $ {matC_3s}')
+total_de_materiales_C_total_2022 = total_requerimientos_mat_C_Total_2022 + matC_3s
+print(f'Total de Materiales: $ {total_de_materiales_C_total_2022}')
+inventario_inicial_materiales_C_total_2022 = matC_3s
+print(f'( - ) Inventario Inicial: $ {inventario_inicial_materiales_A_total_2022}')
+material_a_comprar_C_total_2022 = total_de_materiales_C_total_2022 - inventario_inicial_materiales_C_total_2022
+print(f'Material a Comprar: $ {material_a_comprar_C_total_2022}')
+print(f'Precio de Compra: $ {matC_Costo_3s}')
+total_de_material_C_costo_total_2022 = material_a_comprar_C_total_2022 * matC_Costo_3s
+print(f'Total de Material B en $: {total_de_material_C_costo_total_2022}')
+print('-'*20)
+
+compras_totales_2022 = total_de_material_A_costo_total_2022 + total_de_material_B_costo_total_2022 + total_de_material_B_costo_total_2022
+print(f'Compras totales: $ {compras_totales_2022}')
+print('-'*20)
+
+#**************************************************************
+# 6. Determinación del saldo de Proveedores y Flujo de Salidas
+#**************************************************************
