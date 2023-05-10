@@ -192,12 +192,6 @@ print('-'*20)
 print('Producto CL')
 print('Primer Semestre')
 
-# *********
-#        DESARROLLO
-#     Presupuesto Maestro
-#        jorge
-# *********
-
 print('\t\t\t- - - PRESUPUESTO MAESTRO - - -')
 print('-'*20)
 print('\tI. Presupuesto de Operación')
@@ -241,7 +235,7 @@ print(importe_de_venta_2dosemestre_cp)
 Total_de_ventas_por_1ersemestre =(importe_de_venta_1ersemestre_cf+importe_de_venta_1ersemestre_cd+importe_de_venta_1ersemestre_cp)
 Total_de_ventas_por_2dosemestre =(importe_de_venta_2dosemestre_cf+importe_de_venta_2dosemestre_cd+importe_de_venta_2dosemestre_cp)
 Total_de_ventas_por_semestres = (Total_de_ventas_por_1ersemestre+Total_de_ventas_por_2dosemestre)
-print(f'total de venta'Total_de_ventas_por_semestres)
+print(f'total de venta{Total_de_ventas_por_semestres}')
 
 
 #***************
@@ -257,7 +251,7 @@ print("Entradas de efectivo:")
 Por_cobranza2022 = (f'{Saldo_de_clientes_31_Dic_2022}')
 Por_cobranza2023 = (ventas_2022)*(0.8)
 Cobranza_final = (Por_cobranza2022+Por_cobranza2023)
-print(f"cobranza final:"Cobranza_final)
+print(f"cobranza final:{Cobranza_final}")
 Saldo_de_clientesfinal=(Total_de_clientes2022+Cobranza_final)
 
 
@@ -271,16 +265,18 @@ print('Producto CF')
 print("primer semestre")
 unidades_a_vender_1ersemestre = cl_ventas_1s
 print(f'unidades a vender{unidades_a_vender_1ersemestre}')
-inventario_final= inverario_inicial
+inventario_inicial=prodCF_1s 
+inventario_final= inventario_inicial
 print(f'inventario final{inventario_final}')
 total_unidades=(unidades_a_vender_1ersemestre+inventario_final)
 print(f'total de unidades{total_unidades}')
-inverario_inicial=prodCF_1s
-Unidades_a_producir_1ersemestre = (total_unidades-inverario_inicial)
+
+Unidades_a_producir_1ersemestre = (total_unidades-inventario_inicial)
 print("segundo semestre")
 unidades_a_vender_2dosemestre = cl_ventas_2s
 print(f'unidades a vender{unidades_a_vender_2dosemestre}')
-inventario_final_2dosemestre= inverario_inicial_2dosemestre
+inventario_inicial_2dosemestre= cl_ventas_2s
+inventario_final_2dosemestre= inventario_inicial_2dosemestre
 print(f'inventario final{inventario_final_2dosemestre}')
 total_unidades_2dosemestre=(unidades_a_vender_2dosemestre+inventario_final_2dosemestre)
 print(f'total de unidades{total_unidades_2dosemestre}')
@@ -293,7 +289,7 @@ total_inventarioFinal2023=(inventario_final+inventario_final_2dosemestre)
 print(f'total inventario final:{total_inventarioFinal2023}')
 total_deUnidades2023=(total_unidades+total_unidades_2dosemestre)
 print(f'total de unidades:{total_deUnidades2023}')
-total_inventarioInicial2023=(inverario_inicial+inverario_inicial_2dosemestre)
+total_inventarioInicial2023=(inventario_inicial+inverario_inicial_2dosemestre)
 print(f'total de inventario inicial:{total_inventarioInicial2023}')
 total_unidades_aProducir2023=(Unidades_a_producir_1ersemestre+Unidades_a_producir_2dosemestre)
 print(f'total de unidades a producir:{total_unidades_aProducir2023}')
@@ -301,21 +297,22 @@ print(f'total de unidades a producir:{total_unidades_aProducir2023}')
 #Producto CD
 print('Producto CD')
 print("primer semestre")
-unidades_a_vender_1ersemestre = ce_ventas_1s
-print(f'unidades a vender{unidades_a_vender_1ersemestre}')
-inventario_final= inverario_inicial
-print(f'inventario final{inventario_final}')
-total_unidades=(unidades_a_vender_1ersemestre+inventario_final)
-print(f'total de unidades{total_unidades}')
-inverario_inicial=prodCF_1s
-Unidades_a_producir_1ersemestre = (total_unidades-inverario_inicial)
+unidades_a_vender_1ersemestreCD = ce_ventas_1s
+print(f'unidades a vender CD {unidades_a_vender_1ersemestreCD}')
+inventario_inicialCD=prodCD_1s
+inventario_finalCD= inventario_inicialCD
+print(f'inventario final CD {inventario_finalCD}')
+total_unidadesCD=(unidades_a_vender_1ersemestreCD+inventario_finalCD)
+print(f'total de unidades CD {total_unidadesCD}')
+Unidades_a_producir_1ersemestreCD = (total_unidadesCD-inventario_inicialCD)
 print("segundo semestre")
-unidades_a_vender_2dosemestre = cl_ventas_2s
-print(f'unidades a vender{unidades_a_vender_2dosemestre}')
-inventario_final_2dosemestre= inverario_inicial_2dosemestre
-print(f'inventario final{inventario_final_2dosemestre}')
-total_unidades_2dosemestre=(unidades_a_vender_2dosemestre+inventario_final_2dosemestre)
-print(f'total de unidades{total_unidades_2dosemestre}')
-inverario_inicial_2dosemestre=prodCF_2s
-Unidades_a_producir_2dosemestre = (total_unidades_2dosemestre-inverario_inicial_2dosemestre)
-print(f"Unidades a producir en el segundo semestre{Unidades_a_producir_2dosemestre}")
+unidades_a_vender_2dosemestreCD = ce_ventas_2s
+print(f'unidades a vender CD{unidades_a_vender_2dosemestreCD}')
+inventario_inicial_2dosemestreCD = prodCD_2s
+inventario_final_2dosemestreCD= inventario_inicial_2dosemestreCD
+print(f'inventario final CD {inventario_final_2dosemestreCD}')
+total_unidades_2dosemestreCD=(unidades_a_vender_2dosemestreCD+inventario_final_2dosemestreCD)
+print(f'total de unidades CD{total_unidades_2dosemestreCD}')
+inverario_inicial_2dosemestreCD=prodCD_2s
+Unidades_a_producir_2dosemestreCD = (total_unidades_2dosemestreCD-inverario_inicial_2dosemestreCD)
+print(f"Unidades a producir en el segundo semestre CD{Unidades_a_producir_2dosemestreCD}")
