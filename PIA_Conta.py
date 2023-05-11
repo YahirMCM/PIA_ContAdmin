@@ -1244,3 +1244,126 @@ print('Costo Total')
 
 Inv_fin_PT = (Producto_D + Producto_Di + Producto_Z)
 print(f'Total de Material B en $: {total_de_material_C_costo_total_2022}')
+
+#******************      
+#     DESARROLLO
+#Presupuesto Maestro
+# Aldair
+#*******
+#******11************
+print('\tI. Presupuesto Financiero')
+print('\t\t- - - 11. Estado de Costo de Produccion y Ventas- - -')
+print('-'*20)
+
+print(f'Saldo inicial de Materiales: {inv_mats}')
+print(f'Compras de Materiales: {compras_totales_2022}')
+Mat_Dispo=(inv_mats+compras_totales_2022)
+print(f'Material Disponible: {Mat_Dispo}')
+print(f'Inventario Final de Materiales: {Inv_FinMat}')
+Mat_Utili=(Mat_Dispo-Inv_FinMat)
+print(f'Materiales Utilizados: {Mat_Utili}')
+print(f'Mano de Obra Directa: {total_M_O_D_por_semestre}')
+print(f'Gastos de Fabricacion Indirectos: {total_GIF_total2023}')
+costo_prod=(Mat_Utili+total_M_O_D_por_semestre+total_GIF_total2023)
+print(f'Costo de Produccion: {costo_prod}')
+print(f'Inventario inicial de productos terminados: {inv_ProdFin}')
+T_prod_dispo=(costo_prod+inv_ProdFin)
+print(f'Total de produccion disponible: {T_prod_dispo}')
+print(f'Inventario Final de productos terminados: {Inv_fin_PT}')
+costo_ventas=(T_prod_dispo-Inv_fin_PT)
+print(f'Costo de Ventas: {costo_ventas}')
+
+#******12***********
+print('\tI. Presupuesto Financiero')
+print('\t\t- - - 12. Estado de Resultados- - -')
+print('-'*20)
+
+print(f'ventas: {Total_de_ventas_por_1ersemestre}')
+print(f'Costo de ventas: {costo_ventas}')
+Utili_bruta = (Total_de_ventas_por_1ersemestre - costo_ventas)
+print(f'Utilidad Bruta: {Utili_bruta}')
+print(f'Gastos de Operacion: {Total_de_Gastos_de_Operacion_2023}')
+Util_operacion=(Utili_bruta-Total_de_Gastos_de_Operacion_2023)
+print(f'Utilidad de Operacion: {Util_operacion}')
+ISR_3=(Util_operacion*0.3)
+print(f'ISR: {ISR_3}')
+PTU_1=(Util_operacion*0.1)
+print(f'PTU: {PTU_1}')
+Util_neta=(Util_operacion-ISR_3-PTU_1)
+print(f'Utilidad Neta: {Util_neta}')
+
+#******13***********
+print('\tI. Presupuesto Financiero')
+print('\t\t- - - 13. Estado de Flujo de Efectivo- - -')
+print('-'*20)
+
+print(f'Saldo inicial de Efectivo: {efectivo}')
+print('Entradas')
+print(f'Entradas Cobranza 2023: {Por_cobranza2023}')
+print(f'Entradas Cobranza 2022: {Por_cobranza2022}')
+total_cobranza=(Por_cobranza2023+Por_cobranza2022)
+print(f'Total de Entradas: {total_cobranza}')
+Efectivo_Dispo=(efectivo+total_cobranza)
+
+print('Salidas')
+print(f'Proveedores 2023: {total_de_proveedores_2023}')
+print(f'Proveedores 2022: {proveedores_del_2022}')
+print(f'Pago Mano de Obra Directa: {total_M_O_D_por_semestre}')
+pagos_gastos_indirectos_fabricacion=(total_GIF_total2023-depreciacionA_Fabricacion_total2023)
+print(f'Pago Gastos Indirectos de Fabricación : {pagos_gastos_indirectos_fabricacion}')
+pagos_gasto_operacion=(Total_de_Gastos_de_Operacion_2023-(depreciacion_1ersemestre+depreciacion_1ersemestre))
+print(f'Pago de Gastos de Operación: {pagos_gasto_operacion}')
+activo_maquinaria = int(input('Dame la Compra de activo fijo de maquinaria:'))
+print(f'Pago ISR 2022 : {isr}')
+Total_salidas=(isr+activo_maquinaria+pagos_gasto_operacion+pagos_gastos_indirectos_fabricacion+total_M_O_D_por_semestre+proveedores_del_2022+total_de_proveedores_2023)
+print(f'Total de salidas: {Total_salidas}')
+flujo_efectivoactual=Efectivo_Dispo-Total_salidas
+print(f'Fuljo de efectivo anual: {flujo_efectivoactual}')
+
+
+#********14********
+print('\tI. Presupuesto Financiero')
+print('\t\t- - - 14. Balance General- - -')
+print('-'*20)
+
+print('Activo circultante')
+print(f'Efectivo: {efectivo}')
+print(f'Clientes: {clientes}')
+print(f'Deudores Diversos: {deudores}')
+print(f'Funcionarios y Empleados: {funcionarios}')
+print(f'Inventario Materiales: {inv_mats}')
+print(f'Inventario Producto Terminado: {inv_ProdFin}')
+tActCircu = (flujo_efectivoactual+Saldo_de_clientesfinal+deudores+funcionarios+Inv_FinMat+Inv_fin_PT)
+print(f'Total Activo Circulantes {tActCircu}')
+
+print('Activo NO circultante')
+print(f'Tereno: {terry}')
+print(f'Planta y Equipo:{planta}')
+print(f'Depreciacion Acumulada: {despAcum}')
+tActNo= float(despAcum+depreciacionA_Fabricacion_total2023+depreciacion_1ersemestre)
+print(f'Total Activo NO Circulantes: {tActNo}')
+act_total=(tActCircu+tActNo)
+print(f'Activo Total:{act_total}')
+
+print('Pasivo Corto Plazo')
+print(f'Proveedores: {proveedores}')
+print(f'Documentos por pagar: {docx}')
+print(f'ISR por pagar: {isr}')
+print(f'PTU por pagar: {PTU_1}')
+pasivo_cortoplazo=(proveedores+docx+isr+PTU_1)
+print(f'Total de Pasivo a Corto Plazo: {pasivo_cortoplazo}')
+
+print('Pasivo Largo Plazo')
+print(f'Prestamos Bancarios: {prestamos}')
+print(f' Total de Pasivo Largo Plazo : {prestamos}')
+pas_tot=(pasivo_cortoplazo+prestamos)
+print(f'Pasivo Total: {pas_tot}')
+
+print('Capital Contable')
+print(f'Capital aportado: {capital_contr}')
+print(f'Capital Ganado: {capital_ganado}')
+print(f'Utilidad del Ejercicio: {PTU_1}')
+tCapCont= float(capital_contr+capital_ganado+PTU_1)
+print(f'Total de Capital Contable: {tCapCont}')
+sum_pasCapital=(pas_tot+tCapCont)
+print(f'Suma de PASIVO Y CAPITAL: {sum_pasCapital}')
