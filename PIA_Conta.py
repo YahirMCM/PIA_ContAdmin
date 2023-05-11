@@ -878,3 +878,369 @@ print('-'*20)
 #**************************************************************
 # 7. Presupuesto de Mano de Obra Directa
 #**************************************************************
+print(' \t\t\t - - - Presupuesto de mano de obra - - -')
+print('-' * 20)
+print('Primer Semestre')
+print('Producto CF')
+print(f'Unidades a producir semestre1: {Unidades_a_producir_1ersemestre}')
+print(f'Horas requeridas por unidad semestre: {hrs_ManoObra_1}')
+total_de_horas_requeridas_sem = (Unidades_a_producir_1ersemestre * hrs_ManoObra_1)
+cuota_por_hora = 15
+print(f'Cuota por hora semestre 1: {cuota_por_hora}') 
+cf_importe_M_O_D_s1 = ( total_de_horas_requeridas_sem * cuota_por_hora)
+print(cf_importe_M_O_D_s1)
+print('Segundo semestre')
+print(f'Unidades a producir semestre2: {Unidades_a_producir_2dosemestre}')
+print(f'Horas requeridas por unidad semestre2: {hrs_ManoObra_1}')
+total_de_horas_requeridas_semestre2 = (Unidades_a_producir_2dosemestre * hrs_ManoObra_1)
+cuota_por_hora_s2 = 18
+print(f'Cuota por hora semestre 2: {cuota_por_hora_s2}')
+cf_importe_M_O_D_s2 = (total_de_horas_requeridas_semestre2 * cuota_por_hora_s2) 
+print(cf_importe_M_O_D_s2)
+cf_total_2022 = (cf_importe_M_O_D_s1 + cf_importe_M_O_D_s2) #
+
+
+print('Primer Semestre')
+print('Producto CD')
+print(f'Unidades a producir semestre1: {Unidades_a_producir_1ersemestreCD}')
+print(f'Horas requeridas por unidad semestre1: {hrs_ManoObra_2}')
+cd_total_horas_requeridas_s1 = (Unidades_a_producir_1ersemestreCD * hrs_ManoObra_2)
+cd_importe_M_O_D_s1 = (cd_total_horas_requeridas_s1 * cuota_por_hora )
+print(cd_importe_M_O_D_s1)
+print('Segundo semestre')
+print(f'Unidades a producir semestre2: {Unidades_a_producir_2dosemestreCD}')
+print(f'Horas requeridas por unidad semestre2: {hrs_ManoObra_2}')
+cd_total_horas_requeridas_s2 = (Unidades_a_producir_2dosemestreCD * hrs_ManoObra_2)
+cd_importe_M_O_D_s2 = (cd_total_horas_requeridas_s2 * cuota_por_hora_s2)
+print(cd_importe_M_O_D_s2)
+cd_total_2022 = (cd_importe_M_O_D_s1 + cd_importe_M_O_D_s2) #
+
+
+print('Primer Semestre')
+print('Producto CP')
+print(f'Unidades a producir semestre1: {Unidades_a_producir_1ersemestreCP}')
+print(f'Horas requeridas por unidad semestre1: {hrs_ManoObra_3}')
+cp_total_horas_requeridas_s1 = (Unidades_a_producir_1ersemestreCP * hrs_ManoObra_3)
+cp_importe_M_O_D_s1 = (cp_total_horas_requeridas_s1 * cuota_por_hora)
+print(cp_importe_M_O_D_s1)
+print('Segundo semestre')
+print(f'Unidades a producir semestre2: {Unidades_a_producir_2dosemestreCP}')
+print(f'Horas requeridas por unidad semestre2: {hrs_ManoObra_3}')
+cp_total_horas_requeridas_s2 = (Unidades_a_producir_2dosemestreCP * hrs_ManoObra_3)
+cp_importe_M_O_D_s2 = (cp_total_horas_requeridas_s2 * cuota_por_hora_s2)
+print(cp_importe_M_O_D_s2)
+cp_total_2022 = (cp_importe_M_O_D_s1 + cp_importe_M_O_D_s2)
+total_de_horas_requeridas_seme = ( total_de_horas_requeridas_sem + cd_total_horas_requeridas_s1 + cp_total_horas_requeridas_s1)
+total_de_horas_requeridas_semestre2 = (total_de_horas_requeridas_semestre2 + cd_total_horas_requeridas_s2 + cp_total_horas_requeridas_s2)
+total_horas_requeridas = (cf_total_2022 + cd_total_2022 + cp_total_2022)
+total_M_O_D_semestre1 =(cf_importe_M_O_D_s1 + cd_importe_M_O_D_s1 + cp_importe_M_O_D_s1)
+total__M_O_D_semestre2 =(cf_importe_M_O_D_s2 + cd_importe_M_O_D_s2 + cp_importe_M_O_D_s2)
+total_M_O_D_por_semestre = (cf_total_2022 + cd_total_2022 + cp_total_2022)
+
+
+########################
+#8. Presupuesto de Gastos Indirectos de fabricacion
+########################
+
+print(' \t\t\t - - - Presupuestos de Gastos Indirectos de Fabricacion - - -')
+print('-'*20)
+print('Primer Semestre')
+depreciacionA_GIF = depreciacionA_Fabricacion/2
+print(f'Depreciacion: {depreciacionA_GIF}')
+print(f'Seguro: {seguros_A}')
+print(f'Mantenimiento: { mant_1s}')
+print(f'Energeticos: {energeticos_1s}')
+print(f'Varios: {varios_1s}')
+total_GIF_Semestre1 =(depreciacionA_GIF + seguros_A + mant_1s + energeticos_1s + varios_1s)
+print('Segundo Semestre')
+print(f'Depreciacion: {depreciacionA_GIF}')
+print(f'Seguro: {seguros_A}')
+print(f'Mantenimiento: {mant_2s}')
+print(f'Energeticos: {energeticos_2s}')
+print(f'Varios: {varios_2s}')
+total_GIF_Semestre2 =(depreciacionA_GIF + seguros_A + mant_2s + energeticos_2s + varios_2s)
+print('Total 2023')
+depreciacionA_Fabricacion_total2023 = (depreciacionA_GIF + depreciacionA_GIF)
+print(f'Depreciacion: { depreciacionA_Fabricacion_total2023}')
+seguros_A_t2023 = (seguros_A + seguros_A)
+print(f'Seguro: {seguros_A_t2023}')
+mant_t2023 = (mant_1s + mant_2s)
+print(f'Mantenimiento: { mant_t2023}')
+energeticos_t2023 = (energeticos_1s + energeticos_2s)
+print(f'Energeticos: {energeticos_t2023}')
+varios_A = (varios_1s + varios_2s)
+print(f'Varios: {varios_A}')
+total_GIF_total2023 = (depreciacionA_Fabricacion_total2023 + seguros_A_t2023 + mant_t2023 + energeticos_t2023 + varios_A)
+print('Coeficiente para determinar el costo por hora de Gastos Indirectos de Fabricacion')
+print(f'Total_MOD_Anual: { total_GIF_total2023 }')
+print(f'Total horas M.O.D. Anual: {total_horas_requeridas}')
+costo_por_hora_GIF = (total_GIF_total2023 / total_horas_requeridas)
+
+# ***
+#           DESARROLLO
+#           9.  PRESUPUESTO DE GASTO DE OPERACION
+#           Allan
+# ***
+
+print('\t\t\t- - - PRESUPUESTO DE GASTO DE OPERACION - - -')
+print('-'*20)
+print('\t- - - 9. Presupuesto de Gasto de Operacion- - -')
+
+print('1er semestre')
+depreciacion_1ersemestre = depreciacion_A/2
+print(f'depreciacion primer semestre{depreciacion_1ersemestre}')
+sueldos_y_salarios_1ersemestre = sueldosS_A/2
+print(f'sueldos y salarios primer semestre {sueldosS_A}')
+comisiones_1ersemestre = comisiones*0.01
+print(f'comisiones primer semestre {comisiones}')
+print(f'varios primer semestre {varios_1s}')
+intereses_prestamo_1ersemestre =  intereses_prestamo_A/2
+print(f'intereses del prestamo del primer semestre {intereses_prestamo_A}')
+Total_de_Gastos_de_Operacion_1er_semestre =  depreciacion_1ersemestre+sueldos_y_salarios_1ersemestre+comisiones_1ersemestre+varios_1s
+print(f'Total de Gastos de Operacion 1er semestre {Total_de_Gastos_de_Operacion_1er_semestre}')
+
+print(f'2do semestre')
+depreciacion_2dosemestre = depreciacion_A/2
+print(f'depreciacion segundo semestre{depreciacion_2dosemestre}')
+sueldos_y_salarios_2dosemestre = sueldosS_A/2
+print(f'sueldos y salarios segundo semestre {sueldosS_A}')
+comisiones_2dosemestre = comisiones*0.01
+print(f'comisiones segundo semestre {comisiones}')
+print(f'varios segundo semestre {varios_2s}')
+intereses_prestamo_2dosemestre =  intereses_prestamo_A/2
+print(f'intereses del prestamo del segundo semestre {intereses_prestamo_A}')
+Total_de_Gastos_de_Operacion_2do_semestre =  depreciacion_2dosemestre+sueldos_y_salarios_2dosemestre+comisiones_2dosemestre+varios_2s
+print(f'Total de Gastos de Operacion 2do semestre {Total_de_Gastos_de_Operacion_2do_semestre}')
+
+
+print(f'Total 2023')
+Total_de_Gastos_de_Operacion_2023 = Total_de_Gastos_de_Operacion_1er_semestre + Total_de_Gastos_de_Operacion_2do_semestre
+print(f'Total de Gastos de Operacion 2023 {Total_de_Gastos_de_Operacion_2023}')
+
+# ***
+#        DESARROLLO
+#     DETERMINACION DEL COSTO UNITARIO DE PRODUCTOS TERMINADOS
+#        Allan
+# ***
+
+print('\t\t\t- - - Determinacion del Costo Unitario de Productos Terminados - - -')
+print('-'*20)
+print('\t- - - 10. Determinacion del Costo Unitario de Productos Terminados - - -')
+
+#       Prodcuto CF
+
+Producto_CF = prodCF_2s  
+print(f'Costo') 
+costo_mat_A = matA_Costo_2s
+
+print(f'Material A : $ {costo_mat_A}')
+
+costo_mat_B = matB_Costo_2s
+print(f'Material B : $ {costo_mat_B}')
+
+costo_mat_C = matC_Costo_1s
+print(f'Material C : $ {costo_mat_C}')
+
+Costo_Mano_de_Obra = cuota_por_hora
+print(f'Mano de Obra : $ {cuota_por_hora}')
+
+Hora_de_Mano_de_Obra = hrs_ManoObra_2
+ 
+print(f'Gastos Indirectos de Fabricacion')
+total_GIF_total2023 = (depreciacionA_Fabricacion_total2023 + seguros_A_t2023 + mant_t2023 + energeticos_t2023 + varios_A)
+costo_por_hora_GIF = total_GIF_total2023
+print(f'Total_MOD_Anual: { total_GIF_total2023 }')
+
+print('Cantidad')
+costo_mat_A = matA_Costo_2s
+
+print(f'Material A : $ {costo_mat_A}')
+
+costo_mat_B = matB_Costo_2s
+print(f'Material B : $ {costo_mat_B}')
+
+costo_mat_C = matC_Costo_2s
+print(f'Material C : $ {costo_mat_C}')
+
+Costo_Mano_de_Obra = cuota_por_hora
+print(f'Mano de Obra : $ {cuota_por_hora}')
+
+Hora_de_Mano_de_Obra = hrs_ManoObra_2
+ 
+print(f'Gastos Indirectos de Fabricacion')
+total_GIF_total2023 = (depreciacionA_Fabricacion_total2023 + seguros_A_t2023 + mant_t2023 + energeticos_t2023 + varios_A)
+print(f'Total_MOD_Anual: { total_GIF_total2023 }')
+
+print(f'Costo Unitario ') 
+costo_unitarioA = (costo_mat_A * costo_mat_A)
+costo_unitarioB = (costo_mat_B * costo_mat_B)
+costo_unitarioC = (costo_mat_C * costo_mat_C)
+costo_unitarioOb = (hrs_ManoObra_2 * hrs_ManoObra_2)
+costo_unitarioGI = (hrs_ManoObra_2 * costo_por_hora_GIF )
+Costo_unitarioCF = (costo_unitarioA + costo_unitarioB + costo_unitarioC + costo_unitarioOb + costo_unitarioGI)
+
+print(f'Costo Unitario ') 
+
+#       Producto CD
+
+Producto_CD = prodCD_2s
+print(f'Costo') 
+costo_mat_A = matA_Costo_2s
+
+print(f'Material A : $ {costo_mat_A}')
+
+costo_mat_B = matB_Costo_2s
+print(f'Material B : $ {costo_mat_B}')
+
+costo_mat_C = matC_Costo_1s
+print(f'Material C : $ {costo_mat_C}')
+
+Costo_Mano_de_Obra = cuota_por_hora
+print(f'Mano de Obra : $ {cuota_por_hora}')
+
+Hora_de_Mano_de_Obra = hrs_ManoObra_2
+ 
+print(f'Gastos Indirectos de Fabricacion')
+total_GIF_total2023 = (depreciacionA_Fabricacion_total2023 + seguros_A_t2023 + mant_t2023 + energeticos_t2023 + varios_A)
+print(f'Total_MOD_Anual: { total_GIF_total2023 }')
+
+print('Cantidad')
+costo_mat_A = matA_Costo_2s
+
+print(f'Material A : $ {costo_mat_A}')
+
+costo_mat_B = matB_Costo_2s
+print(f'Material B : $ {costo_mat_B}')
+
+costo_mat_C = matC_Costo_2s
+print(f'Material C : $ {costo_mat_C}')
+
+Costo_Mano_de_Obra = cuota_por_hora
+print(f'Mano de Obra : $ {cuota_por_hora}')
+
+Hora_de_Mano_de_Obra = hrs_ManoObra_2
+ 
+print(f'Gastos Indirectos de Fabricacion')
+total_GIF_total2023 = (depreciacionA_Fabricacion_total2023 + seguros_A_t2023 + mant_t2023 + energeticos_t2023 + varios_A)
+print(f'Total_MOD_Anual: { total_GIF_total2023 }')
+
+print(f'Costo Unitario ') 
+costo_unitarioA = (costo_mat_A * costo_mat_A)
+costo_unitarioB = (costo_mat_B * costo_mat_B)
+costo_unitarioC = (costo_mat_C * costo_mat_C)
+costo_unitarioOb = (hrs_ManoObra_2 * hrs_ManoObra_2)
+costo_unitarioGI = (hrs_ManoObra_2 * costo_por_hora_GIF )
+Costo_unitarioCD = (costo_unitarioA + costo_unitarioB + costo_unitarioC + costo_unitarioOb + costo_unitarioGI)
+
+print(f'Costo Unitario ') 
+
+#Producto CP
+
+Producto_CP = prodCP_2s  
+print(f'Costo') 
+costo_mat_A = matA_Costo_2s
+
+print(f'Material A : $ {costo_mat_A}')
+
+costo_mat_B = matB_Costo_2s
+print(f'Material B : $ {costo_mat_B}')
+
+costo_mat_C = matC_Costo_1s
+print(f'Material C : $ {costo_mat_C}')
+
+Costo_Mano_de_Obra = cuota_por_hora
+print(f'Mano de Obra : $ {cuota_por_hora}')
+
+Hora_de_Mano_de_Obra = hrs_ManoObra_2
+ 
+print(f'Gastos Indirectos de Fabricacion')
+total_GIF_total2023 = (depreciacionA_Fabricacion_total2023 + seguros_A_t2023 + mant_t2023 + energeticos_t2023 + varios_A)
+print(f'Total_MOD_Anual: { total_GIF_total2023 }')
+
+print('Cantidad')
+costo_mat_A = matA_Costo_2s
+
+print(f'Material A : $ {costo_mat_A}')
+
+costo_mat_B = matB_Costo_2s
+print(f'Material B : $ {costo_mat_B}')
+
+costo_mat_C = matC_Costo_2s
+print(f'Material C : $ {costo_mat_C}')
+
+Costo_Mano_de_Obra = cuota_por_hora
+print(f'Mano de Obra : $ {cuota_por_hora}')
+
+Hora_de_Mano_de_Obra = hrs_ManoObra_2
+ 
+print(f'Gastos Indirectos de Fabricacion')
+total_GIF_total2023 = (depreciacionA_Fabricacion_total2023 + seguros_A_t2023 + mant_t2023 + energeticos_t2023 + varios_A)
+print(f'Total_MOD_Anual: { total_GIF_total2023 }')
+
+print(f'Costo Unitario ') 
+costo_unitarioA = (costo_mat_A * costo_mat_A)
+costo_unitarioB = (costo_mat_B * costo_mat_B)
+costo_unitarioC = (costo_mat_C * costo_mat_C)
+costo_unitarioOb = (hrs_ManoObra_2 * hrs_ManoObra_2)
+costo_unitarioGI = (hrs_ManoObra_2 * costo_por_hora_GIF )
+Costo_unitarioCP = (costo_unitarioA + costo_unitarioB + costo_unitarioC + costo_unitarioOb + costo_unitarioGI)
+
+print(f'Costo Unitario ') 
+
+# ***
+#           DESARROLLO
+#           VALUACION DE INVENTARIOS FINALES
+#           Allan
+# ***
+
+#       Inventario Final de Materiales
+
+print('\t\t\t- - - Valuacion de Inventarios Finales - - -')
+print('-'*20)
+print('\t- - - 11. Valuacion de Inventarios Finales - - -')
+
+print(f'descripcion')
+Material_A = matA_2s
+print(f'Material A {matA_2s}')
+Material_B = matB_2s
+print(f'Material B{matB_2s}')
+Material_C = matC_2s
+print(f'Material C{matC_2s}')
+
+Costo_UnitarioA = costo_mat_A
+print(f'Material A{costo_mat_A}')
+
+Costo_UnitarioB = costo_mat_B
+print(f'Material B{costo_mat_B}')
+
+Costo_UnitarioC = costo_mat_C
+print(f'Material C{costo_mat_C}')
+
+print(f'Costo_Total A')
+print(f'Costo Total B')
+print(f'Costo Total C')
+
+Costo_TotalA = matA_2s * costo_mat_A
+Costo_TotalB = matB_2s * costo_mat_B
+Costo_TotalC = matC_2s * costo_mat_C
+
+Inv_FinMat = (Costo_TotalA + Costo_TotalB + Costo_TotalC)
+
+# Inventario Final de Producto Terminado
+
+print('descripcion')
+
+Producto_D = (inventario_final_2dosemestre)
+Producto_Di = (inventario_final_2dosemestreCD)
+Producto_Z = (inventario_final_2dosemestreCP)
+
+print('Costo Unitario')
+
+Costo_unitarioCF = (costo_unitarioA + costo_unitarioB + costo_unitarioC + costo_unitarioOb + costo_unitarioGI)
+Costo_unitarioCD = (costo_unitarioA + costo_unitarioB + costo_unitarioC + costo_unitarioOb + costo_unitarioGI)
+Costo_unitarioCP = (costo_unitarioA + costo_unitarioB + costo_unitarioC + costo_unitarioOb + costo_unitarioGI)
+
+print('Costo Total')
+
+Inv_fin_PT = (Producto_D + Producto_Di + Producto_Z)
+print(f'Total de Material B en $: {total_de_material_C_costo_total_2022}')
