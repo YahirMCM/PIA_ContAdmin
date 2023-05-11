@@ -794,10 +794,10 @@ print('Material A')
 print('-'*20)
 
 print(f'Requerimiento de Materiales: $ {total_requerimientos_mat_A_Total_2022}')
-print(f'( + ) Inventario Final: $ {matA_3s}')
-total_de_materiales_A_total_2022 = total_requerimientos_mat_A_Total_2022 + matA_3s
+print(f'( + ) Inventario Final: $ {matA_2s}')
+total_de_materiales_A_total_2022 = total_requerimientos_mat_A_Total_2022 + matA_2s
 print(f'Total de Materiales: $ {total_de_materiales_A_total_2022}')
-inventario_inicial_materiales_A_total_2022 = matA_3s
+inventario_inicial_materiales_A_total_2022 = matA_2s
 print(f'( - ) Inventario Inicial: $ {inventario_inicial_materiales_A_total_2022}')
 material_a_comprar_A_total_2022 = total_de_materiales_A_total_2022 - inventario_inicial_materiales_A_total_2022
 print(f'Material a Comprar: $ {material_a_comprar_A_total_2022}')
@@ -811,10 +811,10 @@ print('Material B')
 print('-'*20)
 
 print(f'Requerimiento de Materiales: $ {total_requerimientos_mat_B_Total_2022}')
-print(f'( + ) Inventario Final: $ {matB_3s}')
-total_de_materiales_B_total_2022 = total_requerimientos_mat_B_Total_2022 + matB_3s
+print(f'( + ) Inventario Final: $ {matB_2s}')
+total_de_materiales_B_total_2022 = total_requerimientos_mat_B_Total_2022 + matB_2s
 print(f'Total de Materiales: $ {total_de_materiales_B_total_2022}')
-inventario_inicial_materiales_B_total_2022 = matB_3s
+inventario_inicial_materiales_B_total_2022 = matB_2s
 print(f'( - ) Inventario Inicial: $ {inventario_inicial_materiales_B_total_2022}')
 material_a_comprar_B_total_2022 = total_de_materiales_B_total_2022 - inventario_inicial_materiales_B_total_2022
 print(f'Material a Comprar: $ {material_a_comprar_B_total_2022}')
@@ -828,10 +828,10 @@ print('Material C')
 print('-'*20)
 
 print(f'Requerimiento de Materiales: $ {total_requerimientos_mat_C_Total_2022}')
-print(f'( + ) Inventario Final: $ {matC_3s}')
-total_de_materiales_C_total_2022 = total_requerimientos_mat_C_Total_2022 + matC_3s
+print(f'( + ) Inventario Final: $ {matC_2s}')
+total_de_materiales_C_total_2022 = total_requerimientos_mat_C_Total_2022 + matC_2s
 print(f'Total de Materiales: $ {total_de_materiales_C_total_2022}')
-inventario_inicial_materiales_C_total_2022 = matC_3s
+inventario_inicial_materiales_C_total_2022 = matC_2s
 print(f'( - ) Inventario Inicial: $ {inventario_inicial_materiales_A_total_2022}')
 material_a_comprar_C_total_2022 = total_de_materiales_C_total_2022 - inventario_inicial_materiales_C_total_2022
 print(f'Material a Comprar: $ {material_a_comprar_C_total_2022}')
