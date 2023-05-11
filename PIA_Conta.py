@@ -21,7 +21,7 @@ print('-'*20)
 terry = int(input("\tTerreno: "))
 planta = int(input("\tPlanta y Equipo: "))
 despAcum = int(input("\tDepreciacion acomulada: "))
-tActNo = (terry + planta - despAcum)
+tActNo = (terry + planta + despAcum)
 print("Total de Activo No Circulante: ", tActNo)
 
 print('-'*20)
@@ -801,8 +801,8 @@ inventario_inicial_materiales_A_total_2022 = matA_2s
 print(f'( - ) Inventario Inicial: $ {inventario_inicial_materiales_A_total_2022}')
 material_a_comprar_A_total_2022 = total_de_materiales_A_total_2022 - inventario_inicial_materiales_A_total_2022
 print(f'Material a Comprar: $ {material_a_comprar_A_total_2022}')
-print(f'Precio de Compra: $ {matA_Costo_3s}')
-total_de_material_A_costo_total_2022 = material_a_comprar_A_total_2022 * matA_Costo_3s
+print(f'Precio de Compra: $ {matA_Costo_2s}')
+total_de_material_A_costo_total_2022 = material_a_comprar_A_total_2022 * matA_Costo_2s
 print(f'Total de Material A en $: {total_de_material_A_costo_total_2022}')
 print('-'*20)
 
@@ -818,8 +818,8 @@ inventario_inicial_materiales_B_total_2022 = matB_2s
 print(f'( - ) Inventario Inicial: $ {inventario_inicial_materiales_B_total_2022}')
 material_a_comprar_B_total_2022 = total_de_materiales_B_total_2022 - inventario_inicial_materiales_B_total_2022
 print(f'Material a Comprar: $ {material_a_comprar_B_total_2022}')
-print(f'Precio de Compra: $ {matB_Costo_3s}')
-total_de_material_B_costo_total_2022 = material_a_comprar_B_total_2022 * matB_Costo_3s
+print(f'Precio de Compra: $ {matB_Costo_2s}')
+total_de_material_B_costo_total_2022 = material_a_comprar_B_total_2022 * matB_Costo_2s
 print(f'Total de Material B en $: {total_de_material_B_costo_total_2022}')
 print('-'*20)
 
@@ -835,8 +835,8 @@ inventario_inicial_materiales_C_total_2022 = matC_2s
 print(f'( - ) Inventario Inicial: $ {inventario_inicial_materiales_A_total_2022}')
 material_a_comprar_C_total_2022 = total_de_materiales_C_total_2022 - inventario_inicial_materiales_C_total_2022
 print(f'Material a Comprar: $ {material_a_comprar_C_total_2022}')
-print(f'Precio de Compra: $ {matC_Costo_3s}')
-total_de_material_C_costo_total_2022 = material_a_comprar_C_total_2022 * matC_Costo_3s
+print(f'Precio de Compra: $ {matC_Costo_2s}')
+total_de_material_C_costo_total_2022 = material_a_comprar_C_total_2022 * matC_Costo_2s
 print(f'Total de Material B en $: {total_de_material_C_costo_total_2022}')
 print('-'*20)
 
