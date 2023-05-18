@@ -189,63 +189,77 @@ print('-'*20)
 print('\tI. Presupuesto de Operación')
 print('\t\t- - - 1. Presupuesto de Ventas- - -')
 print('-'*20)
-print('Producto CL')
+print('\tProducto CL')
 print('Primer Semestre')
 print(f'Unidades a vender semestre1: {cl_ventas_1s}')
 print(f'Precio de Ventas semestre1: {cl_1s}')
 importe_de_venta_1ersemestre_cf = (cl_1s * cl_ventas_1s)
 print(importe_de_venta_1ersemestre_cf)
+print('-'*20)
 print('Segundo Semestre')
 print(f'Unidades a vender semestre2: {cl_ventas_2s}')
 print(f'Precio de Ventas semestre2: {cl_2s}')
 importe_de_venta_2dosemestre_cf = (cl_2s * cl_ventas_2s)
 print(importe_de_venta_2dosemestre_cf)
+print('-'*20)
 #Carne diaria
-print('Producto CE')
+print('\tProducto CE')
 print('Primer Semestre')
 print(f'Unidades a vender semestre1: {ce_ventas_1s}')
 print(f'Precio de Ventas semestre1: {ce_1s}')
 importe_de_venta_1ersemestre_cd = (ce_1s * ce_ventas_1s)
 print(importe_de_venta_1ersemestre_cd)
+print('-'*20)
 print('Segundo Semestre')
 print(f'Unidades a vender semestre2: {ce_ventas_2s}')
 print(f'Precio de Ventas semestre2: {ce_2s}')
 importe_de_venta_2dosemestre_cd = (ce_2s * ce_ventas_2s)
 print(importe_de_venta_2dosemestre_cd)
+print('-'*20)
 #carne pollo
-print('Producto CR')
+print('\tProducto CR')
 print('Primer Semestre')
 print(f'Unidades a vender semestre1: {cr_ventas_1s}')
 print(f'Precio de Ventas semestre1: {cr_1s}')
 importe_de_venta_1ersemestre_cp = (cr_1s * cr_ventas_1s)
 print(importe_de_venta_1ersemestre_cp)
+print('-'*20)
 print('Segundo Semestre')
 print(f'Unidades a vender semestre2: {cr_ventas_2s}')
 print(f'Precio de Ventas semestre2: {cr_2s}')
 importe_de_venta_2dosemestre_cp = (cr_2s * cr_ventas_2s)
 print(importe_de_venta_2dosemestre_cp)
+print('-'*20)
 Total_de_ventas_por_1ersemestre =(importe_de_venta_1ersemestre_cf+importe_de_venta_1ersemestre_cd+importe_de_venta_1ersemestre_cp)
 Total_de_ventas_por_2dosemestre =(importe_de_venta_2dosemestre_cf+importe_de_venta_2dosemestre_cd+importe_de_venta_2dosemestre_cp)
 Total_de_ventas_por_semestres = (Total_de_ventas_por_1ersemestre+Total_de_ventas_por_2dosemestre)
 print(f'total de venta{Total_de_ventas_por_semestres}')
-
+print('-'*20)
 
 #***************
 #2.Determinacion del saldo de clientes y flujo de entradas
 #****************
 print('\t\t- - - 2.Determinacion del saldo de clientes y flujo de entradas- - -')
 print('-'*20)
+print(f'\tTotal')
 Saldo_de_clientes_31_Dic_2022 = clientes
+print(f'Saldo de Clientes 31-Dic-2022: {Saldo_de_clientes_31_Dic_2022}')
 ventas_2022 = Total_de_ventas_por_semestres 
+print(f'Ventas 2022: {ventas_2022}')
 Total_de_clientes2022 = (Saldo_de_clientes_31_Dic_2022+ventas_2022) # ERROR EN ESTA LÍNEA -> CREO QUE LO CORREGÍ
 print(f"Total de clientes 2022:{Total_de_clientes2022}")
-print("Entradas de efectivo:")
+print('-'*20)
+print('\tImporte')
+print("\tEntradas de efectivo:")
 Por_cobranza2022 = Saldo_de_clientes_31_Dic_2022
+print(f'Por cobranza 2022: {Por_cobranza2022}')
 Por_cobranza2023 = (ventas_2022)*(0.8)
+print(f'Por cobranza 2023: {Por_cobranza2023}')
 Cobranza_final = (Por_cobranza2022+Por_cobranza2023)
 print(f"cobranza final:{Cobranza_final}")
 Saldo_de_clientesfinal=(Total_de_clientes2022+Cobranza_final)
-
+print(f'Saldo de Clientes Final: {Saldo_de_clientesfinal}')
+print('-'*20)
 
 #****************************
 #3. Presupuesto de Producción
@@ -253,8 +267,8 @@ Saldo_de_clientesfinal=(Total_de_clientes2022+Cobranza_final)
 #Producto CF
 print('\t\t- - -3. Presupuesto de Producción - - -')
 print('-'*20)
-print('Producto CF')
-print("primer semestre")
+print('\tProducto CF')
+print("\tPrimer semestre")
 unidades_a_vender_1ersemestre = cl_ventas_1s
 print(f'unidades a vender{unidades_a_vender_1ersemestre}')
 inventario_inicial=prodCF_1s 
@@ -263,8 +277,9 @@ print(f'inventario final{inventario_final}')
 total_unidades=(unidades_a_vender_1ersemestre+inventario_final)
 print(f'total de unidades{total_unidades}')
 Unidades_a_producir_1ersemestre = (total_unidades-inventario_inicial)
+print('-'*20)
 
-print("segundo semestre")
+print("\tSegundo semestre")
 unidades_a_vender_2dosemestre = cl_ventas_2s
 print(f'unidades a vender{unidades_a_vender_2dosemestre}')
 inventario_inicial_2dosemestre= cl_ventas_2s
@@ -275,6 +290,7 @@ print(f'total de unidades{total_unidades_2dosemestre}')
 inverario_inicial_2dosemestre=prodCF_2s
 Unidades_a_producir_2dosemestre = (total_unidades_2dosemestre-inverario_inicial_2dosemestre)
 print(f"Unidades a producir en el segundo semestre{Unidades_a_producir_2dosemestre}")
+print('-'*20)
 
 total_unidades_aventa2023=(unidades_a_vender_1ersemestre+unidades_a_vender_2dosemestre)
 print(f'total de unidades a vender:{total_unidades_aventa2023}')
@@ -286,75 +302,82 @@ total_inventarioInicial2023=(inventario_inicial+inverario_inicial_2dosemestre)
 print(f'total de inventario inicial:{total_inventarioInicial2023}')
 total_unidades_aProducir2023=(Unidades_a_producir_1ersemestre+Unidades_a_producir_2dosemestre)
 print(f'total de unidades a producir:{total_unidades_aProducir2023}')
+print('-'*20)
 
 #Producto CD
-print('Producto CD')
-print("primer semestre")
+print('\tProducto CD')
+print("\tPrimer semestre")
 unidades_a_vender_1ersemestreCD = ce_ventas_1s
 print(f'unidades a vender CD {unidades_a_vender_1ersemestreCD}')
 inventario_inicialCD=prodCD_1s
 inventario_finalCD= inventario_inicialCD
 print(f'inventario final CD {inventario_finalCD}')
 total_unidadesCD=(unidades_a_vender_1ersemestreCD+inventario_finalCD)
-print(f'total de unidades CD {total_unidadesCD}')
+print(f'Total de unidades CD {total_unidadesCD}')
 Unidades_a_producir_1ersemestreCD = (total_unidadesCD-inventario_inicialCD)
-print("segundo semestre")
+print('-'*20)
+
+print("\tSegundo semestre")
 unidades_a_vender_2dosemestreCD = ce_ventas_2s
-print(f'unidades a vender CD{unidades_a_vender_2dosemestreCD}')
+print(f'Unidades a vender CD{unidades_a_vender_2dosemestreCD}')
 inventario_inicial_2dosemestreCD = prodCD_2s
 inventario_final_2dosemestreCD= inventario_inicial_2dosemestreCD
-print(f'inventario final CD {inventario_final_2dosemestreCD}')
+print(f'Inventario final CD {inventario_final_2dosemestreCD}')
 total_unidades_2dosemestreCD=(unidades_a_vender_2dosemestreCD+inventario_final_2dosemestreCD)
-print(f'total de unidades CD{total_unidades_2dosemestreCD}')
+print(f'Total de unidades CD{total_unidades_2dosemestreCD}')
 inverario_inicial_2dosemestreCD=prodCD_2s
 Unidades_a_producir_2dosemestreCD = (total_unidades_2dosemestreCD-inverario_inicial_2dosemestreCD)
 print(f"Unidades a producir en el segundo semestre CD{Unidades_a_producir_2dosemestreCD}")
+print('-'*20)
 
 total_unidades_aventa2023CD=(unidades_a_vender_1ersemestreCD+unidades_a_vender_2dosemestreCD)
-print(f'total de unidades a vender CD:{total_unidades_aventa2023CD}')
+print(f'Total de unidades a vender CD:{total_unidades_aventa2023CD}')
 total_inventarioFinal2023CD=(inventario_finalCD+inventario_final_2dosemestreCD)
-print(f'total inventario final CD:{total_inventarioFinal2023CD}')
+print(f'Total inventario final CD:{total_inventarioFinal2023CD}')
 total_deUnidades2023CD=(total_unidadesCD+total_unidades_2dosemestreCD)
-print(f'total de unidades CD:{total_deUnidades2023CD}')
+print(f'Total de unidades CD:{total_deUnidades2023CD}')
 total_inventarioInicial2023CD=(inventario_inicialCD+inverario_inicial_2dosemestreCD)
-print(f'total de inventario inicial CD:{total_inventarioInicial2023CD}')
+print(f'Total de inventario inicial CD:{total_inventarioInicial2023CD}')
 total_unidades_aProducir2023CD=(Unidades_a_producir_1ersemestreCD+Unidades_a_producir_2dosemestreCD)
-print(f'total de unidades a producir CD:{total_unidades_aProducir2023CD}')
+print(f'Total de unidades a producir CD:{total_unidades_aProducir2023CD}')
+print('-'*20)
 
 #Producto CP
-print('Producto CP')
-print("primer semestre")
+print('\tProducto CP')
+print("\tPrimer semestre")
 unidades_a_vender_1ersemestreCP = cr_ventas_1s
-print(f'unidades a vender CP{unidades_a_vender_1ersemestreCP}')
+print(f'Unidades a vender CP{unidades_a_vender_1ersemestreCP}')
 inventario_inicialCP=prodCD_1s 
 inventario_finalCP= inventario_inicialCP
-print(f'inventario final CP:{inventario_finalCP}')
+print(f'Inventario final CP:{inventario_finalCP}')
 total_unidadesCP=(unidades_a_vender_1ersemestreCP+inventario_finalCP)
-print(f'total de unidades CP:{total_unidadesCP}')
+print(f'Total de unidades CP:{total_unidadesCP}')
 Unidades_a_producir_1ersemestreCP = (total_unidadesCP-inventario_inicialCP)
+print('-'*20)
 
-print("segundo semestre")
+print("\tSegundo semestre")
 unidades_a_vender_2dosemestreCP = ce_ventas_2s
-print(f'unidades a vender CP:{unidades_a_vender_2dosemestreCP}')
+print(f'Unidades a vender CP:{unidades_a_vender_2dosemestreCP}')
 inventario_inicial_2dosemestreCP= ce_ventas_2s
 inventario_final_2dosemestreCP= inventario_inicial_2dosemestreCP
-print(f'inventario final CP:{inventario_final_2dosemestreCP}')
+print(f'Inventario final CP:{inventario_final_2dosemestreCP}')
 total_unidades_2dosemestreCP=(unidades_a_vender_2dosemestreCP+inventario_final_2dosemestreCP)
-print(f'total de unidades CP:{total_unidades_2dosemestreCP}')
+print(f'Total de unidades CP:{total_unidades_2dosemestreCP}')
 inverario_inicial_2dosemestreCP=prodCP_2s
 Unidades_a_producir_2dosemestreCP = (total_unidades_2dosemestreCP-inverario_inicial_2dosemestreCP)
 print(f"Unidades a producir en el segundo semestre CP:{Unidades_a_producir_2dosemestreCP}")
+print('-'*20)
 
 total_unidades_aventa2023CP=(unidades_a_vender_1ersemestreCP+unidades_a_vender_2dosemestreCP)
-print(f'total de unidades a vender CP:{total_unidades_aventa2023CP}')
+print(f'Total de unidades a vender CP:{total_unidades_aventa2023CP}')
 total_inventarioFinal2023CP=(inventario_finalCP+inventario_final_2dosemestreCP)
-print(f'total inventario final CP:{total_inventarioFinal2023CP}')
+print(f'Total inventario final CP:{total_inventarioFinal2023CP}')
 total_deUnidades2023CP=(total_unidadesCP+total_unidades_2dosemestreCP)
-print(f'total de unidades CP:{total_deUnidades2023CP}')
+print(f'Total de unidades CP:{total_deUnidades2023CP}')
 total_inventarioInicial2023CP=(inventario_inicialCP+inverario_inicial_2dosemestreCP)
-print(f'total de inventario inicial CP:{total_inventarioInicial2023CP}')
+print(f'Total de inventario inicial CP:{total_inventarioInicial2023CP}')
 total_unidades_aProducir2023CP=(Unidades_a_producir_1ersemestreCP+Unidades_a_producir_2dosemestreCP)
-print(f'total de unidades a producir CP:{total_unidades_aProducir2023CP}')
+print(f'Total de unidades a producir CP:{total_unidades_aProducir2023CP}')
 
 #**********************************************
 # 4. Presupuesto de Requerimiento de Materiales
@@ -878,9 +901,9 @@ print('-'*20)
 #**************************************************************
 # 7. Presupuesto de Mano de Obra Directa
 #**************************************************************
-print(' \t\t\t - - - Presupuesto de mano de obra - - -')
+print(' \t\t\t - - - 7. Presupuesto de mano de obra - - -')
 print('-' * 20)
-print('Primer Semestre')
+print('\tPrimer Semestre')
 print('Producto CF')
 print(f'Unidades a producir semestre1: {Unidades_a_producir_1ersemestre}')
 print(f'Horas requeridas por unidad semestre: {hrs_ManoObra_1}')
@@ -888,47 +911,55 @@ total_de_horas_requeridas_sem = (Unidades_a_producir_1ersemestre * hrs_ManoObra_
 cuota_por_hora = 15
 print(f'Cuota por hora semestre 1: {cuota_por_hora}') 
 cf_importe_M_O_D_s1 = ( total_de_horas_requeridas_sem * cuota_por_hora)
-print(cf_importe_M_O_D_s1)
-print('Segundo semestre')
+print(f'Importe de M.O.D: {cf_importe_M_O_D_s1}')
+print('-'*20)
+
+print('\tSegundo semestre')
 print(f'Unidades a producir semestre2: {Unidades_a_producir_2dosemestre}')
 print(f'Horas requeridas por unidad semestre2: {hrs_ManoObra_1}')
 total_de_horas_requeridas_semestre2 = (Unidades_a_producir_2dosemestre * hrs_ManoObra_1)
 cuota_por_hora_s2 = 18
 print(f'Cuota por hora semestre 2: {cuota_por_hora_s2}')
 cf_importe_M_O_D_s2 = (total_de_horas_requeridas_semestre2 * cuota_por_hora_s2) 
-print(cf_importe_M_O_D_s2)
+print(f'Importe de M.O.D: {cf_importe_M_O_D_s2}')
 cf_total_2022 = (cf_importe_M_O_D_s1 + cf_importe_M_O_D_s2) #
+print('-'*20)
 
-
-print('Primer Semestre')
+print('\tPrimer Semestre')
 print('Producto CD')
 print(f'Unidades a producir semestre1: {Unidades_a_producir_1ersemestreCD}')
 print(f'Horas requeridas por unidad semestre1: {hrs_ManoObra_2}')
 cd_total_horas_requeridas_s1 = (Unidades_a_producir_1ersemestreCD * hrs_ManoObra_2)
 cd_importe_M_O_D_s1 = (cd_total_horas_requeridas_s1 * cuota_por_hora )
-print(cd_importe_M_O_D_s1)
-print('Segundo semestre')
+print(f'Importe de M.O.D: {cd_importe_M_O_D_s1}')
+print('-'*20)
+
+print('\tSegundo semestre')
 print(f'Unidades a producir semestre2: {Unidades_a_producir_2dosemestreCD}')
 print(f'Horas requeridas por unidad semestre2: {hrs_ManoObra_2}')
 cd_total_horas_requeridas_s2 = (Unidades_a_producir_2dosemestreCD * hrs_ManoObra_2)
 cd_importe_M_O_D_s2 = (cd_total_horas_requeridas_s2 * cuota_por_hora_s2)
-print(cd_importe_M_O_D_s2)
+print(f'Importe de M.O.D: {cd_importe_M_O_D_s2}')
 cd_total_2022 = (cd_importe_M_O_D_s1 + cd_importe_M_O_D_s2) #
+print('-'*20)
 
-
-print('Primer Semestre')
+print('\tPrimer Semestre')
 print('Producto CP')
 print(f'Unidades a producir semestre1: {Unidades_a_producir_1ersemestreCP}')
 print(f'Horas requeridas por unidad semestre1: {hrs_ManoObra_3}')
 cp_total_horas_requeridas_s1 = (Unidades_a_producir_1ersemestreCP * hrs_ManoObra_3)
 cp_importe_M_O_D_s1 = (cp_total_horas_requeridas_s1 * cuota_por_hora)
-print(cp_importe_M_O_D_s1)
-print('Segundo semestre')
+print(f'Importe de M.O.D: {cp_importe_M_O_D_s1}')
+print('-'*20)
+
+print('\tSegundo semestre')
 print(f'Unidades a producir semestre2: {Unidades_a_producir_2dosemestreCP}')
 print(f'Horas requeridas por unidad semestre2: {hrs_ManoObra_3}')
 cp_total_horas_requeridas_s2 = (Unidades_a_producir_2dosemestreCP * hrs_ManoObra_3)
 cp_importe_M_O_D_s2 = (cp_total_horas_requeridas_s2 * cuota_por_hora_s2)
-print(cp_importe_M_O_D_s2)
+print(f'Importe de M.O.D: {cp_importe_M_O_D_s2}')
+print('-'*20)
+
 cp_total_2022 = (cp_importe_M_O_D_s1 + cp_importe_M_O_D_s2)
 total_de_horas_requeridas_seme = ( total_de_horas_requeridas_sem + cd_total_horas_requeridas_s1 + cp_total_horas_requeridas_s1)
 total_de_horas_requeridas_semestre2 = (total_de_horas_requeridas_semestre2 + cd_total_horas_requeridas_s2 + cp_total_horas_requeridas_s2)
@@ -942,9 +973,9 @@ total_M_O_D_por_semestre = (cf_total_2022 + cd_total_2022 + cp_total_2022)
 #8. Presupuesto de Gastos Indirectos de fabricacion
 ########################
 
-print(' \t\t\t - - - Presupuestos de Gastos Indirectos de Fabricacion - - -')
+print(' \t\t\t - - - 8. Presupuestos de Gastos Indirectos de Fabricacion - - -')
 print('-'*20)
-print('Primer Semestre')
+print('\tPrimer Semestre')
 depreciacionA_GIF = depreciacionA_Fabricacion/2
 print(f'Depreciacion: {depreciacionA_GIF}')
 print(f'Seguro: {seguros_A}')
@@ -952,14 +983,20 @@ print(f'Mantenimiento: { mant_1s}')
 print(f'Energeticos: {energeticos_1s}')
 print(f'Varios: {varios_1s}')
 total_GIF_Semestre1 =(depreciacionA_GIF + seguros_A + mant_1s + energeticos_1s + varios_1s)
-print('Segundo Semestre')
+print(f'Total G.I.F por semestre: {total_GIF_Semestre1}')
+print('-'*20)
+
+print('\tSegundo Semestre')
 print(f'Depreciacion: {depreciacionA_GIF}')
 print(f'Seguro: {seguros_A}')
 print(f'Mantenimiento: {mant_2s}')
 print(f'Energeticos: {energeticos_2s}')
 print(f'Varios: {varios_2s}')
 total_GIF_Semestre2 =(depreciacionA_GIF + seguros_A + mant_2s + energeticos_2s + varios_2s)
-print('Total 2023')
+print(f'Total G.I.F por semestre: {total_GIF_Semestre2}')
+print('-'*20)
+
+print('\tTotal 2023')
 depreciacionA_Fabricacion_total2023 = (depreciacionA_GIF + depreciacionA_GIF)
 print(f'Depreciacion: { depreciacionA_Fabricacion_total2023}')
 seguros_A_t2023 = (seguros_A + seguros_A)
@@ -971,10 +1008,14 @@ print(f'Energeticos: {energeticos_t2023}')
 varios_A = (varios_1s + varios_2s)
 print(f'Varios: {varios_A}')
 total_GIF_total2023 = (depreciacionA_Fabricacion_total2023 + seguros_A_t2023 + mant_t2023 + energeticos_t2023 + varios_A)
+print(f'Total G.I.F por semestre: {total_GIF_total2023}')
+print('-'*20)
+
 print('Coeficiente para determinar el costo por hora de Gastos Indirectos de Fabricacion')
 print(f'Total_MOD_Anual: { total_GIF_total2023 }')
-print(f'Total horas M.O.D. Anual: {total_horas_requeridas}')
+print(f'(/) Total horas M.O.D. Anual: {total_horas_requeridas}')
 costo_por_hora_GIF = (total_GIF_total2023 / total_horas_requeridas)
+print(f'(=) Costo por Hora de G.I.F: {costo_por_hora_GIF}')
 
 # ***
 #           DESARROLLO
@@ -982,11 +1023,10 @@ costo_por_hora_GIF = (total_GIF_total2023 / total_horas_requeridas)
 #           Allan
 # ***
 
-print('\t\t\t- - - PRESUPUESTO DE GASTO DE OPERACION - - -')
 print('-'*20)
-print('\t- - - 9. Presupuesto de Gasto de Operacion- - -')
+print('\t\t\t- - - 9. Presupuesto de Gasto de Operacion- - -')
 
-print('1er semestre')
+print('\t1er semestre')
 depreciacion_1ersemestre = depreciacion_A/2
 print(f'depreciacion primer semestre{depreciacion_1ersemestre}')
 sueldos_y_salarios_1ersemestre = sueldosS_A/2
@@ -998,8 +1038,9 @@ intereses_prestamo_1ersemestre =  intereses_prestamo_A/2
 print(f'intereses del prestamo del primer semestre {intereses_prestamo_A}')
 Total_de_Gastos_de_Operacion_1er_semestre =  depreciacion_1ersemestre+sueldos_y_salarios_1ersemestre+comisiones_1ersemestre+varios_1s
 print(f'Total de Gastos de Operacion 1er semestre {Total_de_Gastos_de_Operacion_1er_semestre}')
+print('-'*20)
 
-print(f'2do semestre')
+print(f'\t2do semestre')
 depreciacion_2dosemestre = depreciacion_A/2
 print(f'depreciacion segundo semestre{depreciacion_2dosemestre}')
 sueldos_y_salarios_2dosemestre = sueldosS_A/2
@@ -1011,26 +1052,27 @@ intereses_prestamo_2dosemestre =  intereses_prestamo_A/2
 print(f'intereses del prestamo del segundo semestre {intereses_prestamo_A}')
 Total_de_Gastos_de_Operacion_2do_semestre =  depreciacion_2dosemestre+sueldos_y_salarios_2dosemestre+comisiones_2dosemestre+varios_2s
 print(f'Total de Gastos de Operacion 2do semestre {Total_de_Gastos_de_Operacion_2do_semestre}')
+print('-'*20)
 
-
-print(f'Total 2023')
+# AQUÍ FALTA UNA PARTE SIMILAR AL CÓDIGO ANTERIOR PARA CORRECCIÓN
+print(f'\tTotal 2023')
+# AQUÍ COMIENZA LO QUE FALTA DE CODIFICAR
 Total_de_Gastos_de_Operacion_2023 = Total_de_Gastos_de_Operacion_1er_semestre + Total_de_Gastos_de_Operacion_2do_semestre
 print(f'Total de Gastos de Operacion 2023 {Total_de_Gastos_de_Operacion_2023}')
+print('-'*20)
 
 # ***
 #        DESARROLLO
-#     DETERMINACION DEL COSTO UNITARIO DE PRODUCTOS TERMINADOS
+#     10. DETERMINACION DEL COSTO UNITARIO DE PRODUCTOS TERMINADOS
 #        Allan
 # ***
 
-print('\t\t\t- - - Determinacion del Costo Unitario de Productos Terminados - - -')
+print('\t\t\t- - - 10. Determinacion del Costo Unitario de Productos Terminados - - -')
 print('-'*20)
-print('\t- - - 10. Determinacion del Costo Unitario de Productos Terminados - - -')
-
 #       Prodcuto CF
 
 Producto_CF = prodCF_2s  
-print(f'Costo') 
+print(f'\tCosto') 
 costo_mat_A = matA_Costo_2s
 
 print(f'Material A : $ {costo_mat_A}')
@@ -1046,12 +1088,13 @@ print(f'Mano de Obra : $ {cuota_por_hora}')
 
 Hora_de_Mano_de_Obra = hrs_ManoObra_2
  
-print(f'Gastos Indirectos de Fabricacion')
 total_GIF_total2023 = (depreciacionA_Fabricacion_total2023 + seguros_A_t2023 + mant_t2023 + energeticos_t2023 + varios_A)
 costo_por_hora_GIF = total_GIF_total2023
+print(f'Gastos Indirectos de Fabricacion: {costo_por_hora_GIF}')
 print(f'Total_MOD_Anual: { total_GIF_total2023 }')
+print('-'*20)
 
-print('Cantidad')
+print('\tCantidad')
 costo_mat_A = matA_Costo_2s
 
 print(f'Material A : $ {costo_mat_A}')
@@ -1067,19 +1110,22 @@ print(f'Mano de Obra : $ {cuota_por_hora}')
 
 Hora_de_Mano_de_Obra = hrs_ManoObra_2
  
-print(f'Gastos Indirectos de Fabricacion')
 total_GIF_total2023 = (depreciacionA_Fabricacion_total2023 + seguros_A_t2023 + mant_t2023 + energeticos_t2023 + varios_A)
+print(f'Gastos Indirectos de Fabricacion: {costo_por_hora_GIF}')
 print(f'Total_MOD_Anual: { total_GIF_total2023 }')
+print('-'*20)
 
-print(f'Costo Unitario ') 
+print(f'\tCosto Unitario ')
+# AQUÍ ESTO DEBE DE IMPRIMIRSE 
 costo_unitarioA = (costo_mat_A * costo_mat_A)
 costo_unitarioB = (costo_mat_B * costo_mat_B)
 costo_unitarioC = (costo_mat_C * costo_mat_C)
 costo_unitarioOb = (hrs_ManoObra_2 * hrs_ManoObra_2)
 costo_unitarioGI = (hrs_ManoObra_2 * costo_por_hora_GIF )
 Costo_unitarioCF = (costo_unitarioA + costo_unitarioB + costo_unitarioC + costo_unitarioOb + costo_unitarioGI)
+print('-'*20)
 
-print(f'Costo Unitario ') 
+print(f'\tCosto Unitario ') 
 
 #       Producto CD
 
@@ -1103,8 +1149,9 @@ Hora_de_Mano_de_Obra = hrs_ManoObra_2
 print(f'Gastos Indirectos de Fabricacion')
 total_GIF_total2023 = (depreciacionA_Fabricacion_total2023 + seguros_A_t2023 + mant_t2023 + energeticos_t2023 + varios_A)
 print(f'Total_MOD_Anual: { total_GIF_total2023 }')
+print('-'*20)
 
-print('Cantidad')
+print('\tCantidad')
 costo_mat_A = matA_Costo_2s
 
 print(f'Material A : $ {costo_mat_A}')
@@ -1123,16 +1170,19 @@ Hora_de_Mano_de_Obra = hrs_ManoObra_2
 print(f'Gastos Indirectos de Fabricacion')
 total_GIF_total2023 = (depreciacionA_Fabricacion_total2023 + seguros_A_t2023 + mant_t2023 + energeticos_t2023 + varios_A)
 print(f'Total_MOD_Anual: { total_GIF_total2023 }')
+print('-'*20)
 
-print(f'Costo Unitario ') 
+print(f'\tCosto Unitario ')
+# AQUÍ ESTO SE DEBE DE IMPRIMIR 
 costo_unitarioA = (costo_mat_A * costo_mat_A)
 costo_unitarioB = (costo_mat_B * costo_mat_B)
 costo_unitarioC = (costo_mat_C * costo_mat_C)
 costo_unitarioOb = (hrs_ManoObra_2 * hrs_ManoObra_2)
 costo_unitarioGI = (hrs_ManoObra_2 * costo_por_hora_GIF )
 Costo_unitarioCD = (costo_unitarioA + costo_unitarioB + costo_unitarioC + costo_unitarioOb + costo_unitarioGI)
+print('-'*20)
 
-print(f'Costo Unitario ') 
+print(f'\tCosto Unitario ') 
 
 #Producto CP
 
@@ -1176,16 +1226,17 @@ Hora_de_Mano_de_Obra = hrs_ManoObra_2
 print(f'Gastos Indirectos de Fabricacion')
 total_GIF_total2023 = (depreciacionA_Fabricacion_total2023 + seguros_A_t2023 + mant_t2023 + energeticos_t2023 + varios_A)
 print(f'Total_MOD_Anual: { total_GIF_total2023 }')
+print('-'*20)
 
-print(f'Costo Unitario ') 
+print(f'\tCosto Unitario ')
+# AQUÍ ESTO SE DEBE IMPRIMIR 
 costo_unitarioA = (costo_mat_A * costo_mat_A)
 costo_unitarioB = (costo_mat_B * costo_mat_B)
 costo_unitarioC = (costo_mat_C * costo_mat_C)
 costo_unitarioOb = (hrs_ManoObra_2 * hrs_ManoObra_2)
 costo_unitarioGI = (hrs_ManoObra_2 * costo_por_hora_GIF )
 Costo_unitarioCP = (costo_unitarioA + costo_unitarioB + costo_unitarioC + costo_unitarioOb + costo_unitarioGI)
-
-print(f'Costo Unitario ') 
+print('-'*20)
 
 # ***
 #           DESARROLLO
@@ -1195,17 +1246,18 @@ print(f'Costo Unitario ')
 
 #       Inventario Final de Materiales
 
-print('\t\t\t- - - Valuacion de Inventarios Finales - - -')
 print('-'*20)
 print('\t- - - 11. Valuacion de Inventarios Finales - - -')
+print('-'*20)
 
-print(f'descripcion')
+print(f'\tDescripcion')
 Material_A = matA_2s
 print(f'Material A {matA_2s}')
 Material_B = matB_2s
 print(f'Material B{matB_2s}')
 Material_C = matC_2s
 print(f'Material C{matC_2s}')
+print('-'*20)
 
 Costo_UnitarioA = costo_mat_A
 print(f'Material A{costo_mat_A}')
@@ -1215,35 +1267,42 @@ print(f'Material B{costo_mat_B}')
 
 Costo_UnitarioC = costo_mat_C
 print(f'Material C{costo_mat_C}')
-
-print(f'Costo_Total A')
-print(f'Costo Total B')
-print(f'Costo Total C')
+print('-'*20)
 
 Costo_TotalA = matA_2s * costo_mat_A
 Costo_TotalB = matB_2s * costo_mat_B
 Costo_TotalC = matC_2s * costo_mat_C
 
+print(f'Costo_Total A: {Costo_TotalA}')
+print(f'Costo Total B: {Costo_TotalB}')
+print(f'Costo Total C: {Costo_TotalC}')
+print('-'*20)
+
 Inv_FinMat = (Costo_TotalA + Costo_TotalB + Costo_TotalC)
+print(f'\nInventario Final de Materiales: {Inv_FinMat} \n')
+print('-'*20)
 
 # Inventario Final de Producto Terminado
 
-print('descripcion')
-
+print('\tDescripcion')
+# AQUÍ SE DEBE IMPRIMIR
 Producto_D = (inventario_final_2dosemestre)
 Producto_Di = (inventario_final_2dosemestreCD)
 Producto_Z = (inventario_final_2dosemestreCP)
+print('-'*20)
 
-print('Costo Unitario')
-
+print('\tCosto Unitario')
+# AQUÍ SE DEBE IMPRIMIR
 Costo_unitarioCF = (costo_unitarioA + costo_unitarioB + costo_unitarioC + costo_unitarioOb + costo_unitarioGI)
 Costo_unitarioCD = (costo_unitarioA + costo_unitarioB + costo_unitarioC + costo_unitarioOb + costo_unitarioGI)
 Costo_unitarioCP = (costo_unitarioA + costo_unitarioB + costo_unitarioC + costo_unitarioOb + costo_unitarioGI)
+print('-'*20)
 
-print('Costo Total')
-
+print('\tCosto Total')
+# AQUÍ FALTA INFO Y SE DEBE IMPRIMIR
 Inv_fin_PT = (Producto_D + Producto_Di + Producto_Z)
 print(f'Total de Material B en $: {total_de_material_C_costo_total_2022}')
+print('-'*20)
 
 #******************      
 #     DESARROLLO
@@ -1251,8 +1310,8 @@ print(f'Total de Material B en $: {total_de_material_C_costo_total_2022}')
 # Aldair
 #*******
 #******11************
-print('\tI. Presupuesto Financiero')
-print('\t\t- - - 11. Estado de Costo de Produccion y Ventas- - -')
+print('\tII. Presupuesto Financiero')
+print('\t\t- - - Estado de Costo de Produccion y Ventas- - -')
 print('-'*20)
 
 print(f'Saldo inicial de Materiales: {inv_mats}')
