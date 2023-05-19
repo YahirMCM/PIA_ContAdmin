@@ -21,7 +21,7 @@ print('-'*20)
 terry = int(input("\tTerreno: "))
 planta = int(input("\tPlanta y Equipo: "))
 despAcum = int(input("\tDepreciacion acomulada: "))
-tActNo = (terry + planta + despAcum)
+tActNo = (terry + planta) - (despAcum)
 print("Total de Activo No Circulante: ", tActNo)
 
 print('-'*20)
