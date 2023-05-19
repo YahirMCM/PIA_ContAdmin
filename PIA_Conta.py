@@ -257,7 +257,7 @@ Por_cobranza2023 = (ventas_2022)*(0.8)
 print(f'Por cobranza 2023: {Por_cobranza2023}')
 Cobranza_final = (Por_cobranza2022+Por_cobranza2023)
 print(f"cobranza final:{Cobranza_final}")
-Saldo_de_clientesfinal=(Total_de_clientes2022+Cobranza_final)
+Saldo_de_clientesfinal=(Total_de_clientes2022-Cobranza_final)
 print(f'Saldo de Clientes Final: {Saldo_de_clientesfinal}')
 print('-'*20)
 
@@ -285,7 +285,7 @@ print("\tSegundo semestre")
 unidades_a_vender_2dosemestre = cl_ventas_2s
 print(f'unidades a vender{unidades_a_vender_2dosemestre}')
 inventario_inicial_2dosemestre= cl_ventas_2s
-inventario_final_2dosemestre= inventario_inicial_2dosemestre
+inventario_final_2dosemestre= prodCF_2s
 print(f'inventario final{inventario_final_2dosemestre}')
 total_unidades_2dosemestre=(unidades_a_vender_2dosemestre+inventario_final_2dosemestre)
 print(f'total de unidades{total_unidades_2dosemestre}')
@@ -296,13 +296,13 @@ print('-'*20)
 
 total_unidades_aventa2023=(unidades_a_vender_1ersemestre+unidades_a_vender_2dosemestre)
 print(f'total de unidades a vender:{total_unidades_aventa2023}')
-total_inventarioFinal2023=(inventario_final+inventario_final_2dosemestre)
+total_inventarioFinal2023=(inventario_final_2dosemestre)
 print(f'total inventario final:{total_inventarioFinal2023}')
-total_deUnidades2023=(total_unidades+total_unidades_2dosemestre)
+total_deUnidades2023=(total_unidades_aventa2023+total_unidades_2dosemestre)
 print(f'total de unidades:{total_deUnidades2023}')
-total_inventarioInicial2023=(inventario_inicial+inverario_inicial_2dosemestre)
+total_inventarioInicial2023=(inventario_inicial)
 print(f'total de inventario inicial:{total_inventarioInicial2023}')
-total_unidades_aProducir2023=(Unidades_a_producir_1ersemestre+Unidades_a_producir_2dosemestre)
+total_unidades_aProducir2023=(total_inventarioFinal2023+total_deUnidades2023)
 print(f'total de unidades a producir:{total_unidades_aProducir2023}')
 print('-'*20)
 
