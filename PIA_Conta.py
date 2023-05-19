@@ -276,7 +276,9 @@ inventario_final= inventario_inicial
 print(f'inventario final{inventario_final}')
 total_unidades=(unidades_a_vender_1ersemestre+inventario_final)
 print(f'total de unidades{total_unidades}')
+print(f'Inventario inicial: {inventario_inicial}')
 Unidades_a_producir_1ersemestre = (total_unidades-inventario_inicial)
+print(f'Unidades a producir 1er Semestre: {Unidades_a_producir_1ersemestre}')
 print('-'*20)
 
 print("\tSegundo semestre")
