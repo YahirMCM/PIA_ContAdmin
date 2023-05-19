@@ -290,7 +290,7 @@ print(f'inventario final{inventario_final_2dosemestre}')
 total_unidades_2dosemestre=(unidades_a_vender_2dosemestre+inventario_final_2dosemestre)
 print(f'total de unidades{total_unidades_2dosemestre}')
 inverario_inicial_2dosemestre=prodCF_2s
-Unidades_a_producir_2dosemestre = (total_unidades_2dosemestre-inverario_inicial_2dosemestre)
+Unidades_a_producir_2dosemestre = (total_unidades_2dosemestre-inventario_inicial_2dosemestre)
 print(f"Unidades a producir en el segundo semestre{Unidades_a_producir_2dosemestre}")
 print('-'*20)
 
@@ -302,7 +302,7 @@ total_deUnidades2023=(total_unidades_aventa2023+total_unidades_2dosemestre)
 print(f'total de unidades:{total_deUnidades2023}')
 total_inventarioInicial2023=(inventario_inicial)
 print(f'total de inventario inicial:{total_inventarioInicial2023}')
-total_unidades_aProducir2023=(total_inventarioFinal2023+total_deUnidades2023)
+total_unidades_aProducir2023=(total_inventarioFinal2023-total_deUnidades2023)
 print(f'total de unidades a producir:{total_unidades_aProducir2023}')
 print('-'*20)
 
