@@ -83,9 +83,9 @@ matPrima_C3 = float(input("Producto CP: "))
 print('-'*20)
 
 print('Horas de Mano de Obra')
-hrs_ManoObra_1 = int(input("Producto CF: "))
-hrs_ManoObra_2 = int(input("Producto CD: "))
-hrs_ManoObra_3 = int(input("Producto CP: "))
+hrs_ManoObra_1 = float(input("Producto CF: "))
+hrs_ManoObra_2 = float(input("Producto CD: "))
+hrs_ManoObra_3 = float(input("Producto CP: "))
 print('-'*20)
 
 # ***************************
