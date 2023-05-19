@@ -327,16 +327,16 @@ inventario_final_2dosemestreCD= inventario_inicial_2dosemestreCD
 print(f'Inventario final CD {inventario_final_2dosemestreCD}')
 total_unidades_2dosemestreCD=(unidades_a_vender_2dosemestreCD+inventario_final_2dosemestreCD)
 print(f'Total de unidades CD{total_unidades_2dosemestreCD}')
-inverario_inicial_2dosemestreCD=prodCD_2s
+inverario_inicial_2dosemestreCD= inventario_inicialCD
 Unidades_a_producir_2dosemestreCD = (total_unidades_2dosemestreCD-inverario_inicial_2dosemestreCD)
 print(f"Unidades a producir en el segundo semestre CD{Unidades_a_producir_2dosemestreCD}")
 print('-'*20)
 
 total_unidades_aventa2023CD=(unidades_a_vender_1ersemestreCD+unidades_a_vender_2dosemestreCD)
 print(f'Total de unidades a vender CD:{total_unidades_aventa2023CD}')
-total_inventarioFinal2023CD=(inventario_finalCD+inventario_final_2dosemestreCD)
+total_inventarioFinal2023CD=(inventario_final_2dosemestreCD)
 print(f'Total inventario final CD:{total_inventarioFinal2023CD}')
-total_deUnidades2023CD=(total_unidadesCD+total_unidades_2dosemestreCD)
+total_deUnidades2023CD=(total_inventarioFinal2023CD+total_unidades_2dosemestreCD)
 print(f'Total de unidades CD:{total_deUnidades2023CD}')
 total_inventarioInicial2023CD=(inventario_inicialCD+inverario_inicial_2dosemestreCD)
 print(f'Total de inventario inicial CD:{total_inventarioInicial2023CD}')
